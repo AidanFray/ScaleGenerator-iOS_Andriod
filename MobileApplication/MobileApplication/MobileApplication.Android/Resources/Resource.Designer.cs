@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Application.Droid
+namespace MobileApplication.Droid
 {
 
 

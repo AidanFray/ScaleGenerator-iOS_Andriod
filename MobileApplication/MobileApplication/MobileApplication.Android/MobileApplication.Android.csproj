@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{CB40420C-774C-4AE5-AD5C-A69B3B45D326}</ProjectGuid>
+    <ProjectGuid>{65E6CFA0-2636-4E33-80E8-18DE0055C914}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Application.Droid</RootNamespace>
-    <AssemblyName>Application.Android</AssemblyName>
+    <RootNamespace>MobileApplication.Droid</RootNamespace>
+    <AssemblyName>MobileApplication.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -120,9 +120,9 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Application\Application.csproj">
-      <Project>{a42967f7-43dc-44b9-aa3b-d025c74e5d0e}</Project>
-      <Name>Application</Name>
+    <ProjectReference Include="..\MobileApplication\MobileApplication.csproj">
+      <Project>{281831fd-f5ce-4ce1-b86b-63fda3350fe5}</Project>
+      <Name>MobileApplication</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
