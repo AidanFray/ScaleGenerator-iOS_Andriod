@@ -1,6 +1,8 @@
 ﻿using Foundation;
 using System;
 using UIKit;
+using App2.Shared;
+using System.Collections.Generic;
 
 namespace App2
 {
@@ -14,22 +16,60 @@ namespace App2
         {
             base.ViewDidLoad();
 
+            ApplySettings();
+
             //Allows touch interaction
             scaleText.UserInteractionEnabled = true;
-            UITapGestureRecognizer tap = new UITapGestureRecognizer(ScaleChange);
+            UITapGestureRecognizer tap = new UITapGestureRecognizer(Rnd_ScaleChange);
             scaleView.AddGestureRecognizer(tap);
-
+            
             //Randomises the label
-            ScaleChange();
+            Rnd_ScaleChange();
+        }
+        
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            ApplySettings();
+
         }
 
-        Random r = new Random();
-        string[] scales = new string[] { "C", "D", "E", "F", "G", "A", "B", "D"};
-        public void ScaleChange()
+        //TODO: Refactor
+        public void ApplySettings()
         {
-            int newScale = r.Next(0, scales.Length);
+            scalePool.Clear();
+            for (int i = 0; i < Settings.activeScales.Count; i++)
+            {
+                if (Settings.activeScales[i])
+                {
+                    //Adds scales to the pool
+                    scalePool.Add(Settings.scales[i]);
+                }
+            }
 
-            scaleText.Text = scales[newScale];
+            modePool.Clear();
+            for(int i = 0; i < Settings.activeModes.Count; i++)
+            {
+                if (Settings.activeModes[i])
+                {
+                    //Adds scales to the pool
+                    modePool.Add(Settings.modes[i]);
+                }
+            }
+        }
+
+        //TODO: REFACTOR
+        Random r = new Random();
+        List<string> scalePool = new List<string>();
+        List<string> modePool = new List<string>();
+        public void Rnd_ScaleChange()
+        {
+            int newScale = r.Next(0, scalePool.Count);
+            scaleText.Text = scalePool[newScale];
+
+            int newMode = r.Next(0, modePool.Count);
+            modeText.Text = modePool[newMode];
         }
     }
 }

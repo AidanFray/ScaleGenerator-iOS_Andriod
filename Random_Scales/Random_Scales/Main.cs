@@ -1,5 +1,7 @@
 ﻿using UIKit;
 
+
+//TODO: Turn tab pages into a generic class
 namespace App2
 {
 	public class Application

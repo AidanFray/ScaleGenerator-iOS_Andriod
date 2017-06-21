@@ -137,6 +137,10 @@
     <Compile Include="Controllers\DataViewController.designer.cs">
       <DependentUpon>DataViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Backend\KeyTabPage.cs" />
+    <Compile Include="Backend\KeyTabPage.designer.cs">
+      <DependentUpon>KeyTabPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Backend\MainView.cs" />
@@ -152,10 +156,15 @@
     <Compile Include="Backend\scalePage.designer.cs">
       <DependentUpon>scalePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\settingPage.cs" />
-    <Compile Include="Backend\settingPage.designer.cs">
+    <Compile Include="Controllers\settingPage.cs" />
+    <Compile Include="Controllers\settingPage.designer.cs">
       <DependentUpon>settingPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Backend\ModesTabPage.cs" />
+    <Compile Include="Backend\ModesTabPage.designer.cs">
+      <DependentUpon>ModesTabPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\AppIconNoBackground.png" />

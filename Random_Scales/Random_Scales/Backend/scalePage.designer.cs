@@ -16,6 +16,10 @@ namespace App2
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel modeText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel scaleText { get; set; }
 
         [Outlet]
@@ -24,6 +28,11 @@ namespace App2
 
         void ReleaseDesignerOutlets ()
         {
+            if (modeText != null) {
+                modeText.Dispose ();
+                modeText = null;
+            }
+
             if (scaleText != null) {
                 scaleText.Dispose ();
                 scaleText = null;
