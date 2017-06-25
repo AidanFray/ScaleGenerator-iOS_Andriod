@@ -3,7 +3,6 @@
 //TODO: Turn tab pages into a generic class
 //TODO: [Bug] Having no items selected causes a crash
 //TODO: Expanded scale view
-//TODO: Reset all buttons on the settings tab
 //TODO: Variable naming convention needs to be consistent
 
 namespace ScalesApp

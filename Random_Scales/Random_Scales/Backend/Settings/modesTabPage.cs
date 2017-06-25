@@ -1,56 +1,57 @@
-﻿using Foundation;
-using System;
-using UIKit;
+﻿using ScalesApp.Shared;
 using CoreGraphics;
+using Foundation;
+using System;
 using System.Collections.Generic;
-using ScalesApp.Shared;
-
+using UIKit;
 namespace ScalesApp
 {
-    public partial class KeyTabPage : UIViewController
+    public partial class ModesTabPage : UIViewController
     {
-        public KeyTabPage(IntPtr handle) : base(handle) { }
-        
-        //List of switches
-        public List<UISwitch> switches = new List<UISwitch>();
+        public ModesTabPage (IntPtr handle) : base (handle)
+        {
+        }
 
+        //List of switches
+        public static List<UISwitch> switches = new List<UISwitch>();
+        
         UIScrollView sview;
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
-            //Creates pre defined layout
-            Create_Controls();
-
-            View.AddSubview(sview);
         }
         
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
 
+            //Resets
+            switches.Clear();
+
+            //Creates pre defined layout
+            Create_Controls();
+            View.AddSubview(sview);
             Load_Switches();
         }
         
         public override void ViewWillDisappear(bool animated)
         {
             base.ViewWillDisappear(animated);
-
             Save_Switches();
         }
-
-        private void Create_Controls()
+        
+         private void Create_Controls()
         {
             sview = new UIScrollView()
             {
                 Frame = new CGRect(0, 0, View.Frame.Width, View.Frame.Height),
-                ContentSize = new CGSize(View.Frame.Width, (Settings.scales.Length * spacing) + 100),
+                ContentSize = new CGSize(View.Frame.Width, (Settings.modes.Length * spacing) + 100),
                 ScrollEnabled = true
             };
 
-            for (int i = 0; i < Settings.scales.Length; i++)
+            for (int i = 0; i < Settings.modes.Length; i++)
             {
-                AddControls(Settings.scales[i]);
+                AddControls(Settings.modes[i]);
             }
         }
 
@@ -89,13 +90,13 @@ namespace ScalesApp
 
             position += spacing;
         }
-
+        
         private void Load_Switches()
         {
             //Loads states
             for (int i = 0; i < switches.Count; i++)
             {
-                switches[i] = Settings.LoadSwitchState(switches[i], "keys", i);
+                switches[i] = Settings.LoadSwitchState(switches[i], "modes", i);
             }
         }
         private void Save_Switches()
@@ -103,7 +104,7 @@ namespace ScalesApp
             //Saves all the switch states
             for (int i = 0; i < switches.Count; i++)
             {
-                Settings.SaveSwitchState(switches[i], "keys", i);
+                Settings.SaveSwitchState(switches[i], "modes", i);
             }
         }
     }

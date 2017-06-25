@@ -159,6 +159,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9305" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="313" y="628" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" id="5088" systemItem="mostRecent"/>
                 </viewController>
@@ -175,30 +183,53 @@
                     </layoutGuides>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections/>
+                    <connections>
+                        <outlet property="test" destination="9316" id="name-outlet-9316"/>
+                    </connections>
                     <view contentMode="scaleToFill" id="9269" key="view">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9296" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="307" y="26" width="46" height="30"/>
+                                <state key="normal" title="Reset ">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9297" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="90" y="-11" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9316" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="298" y="27" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="9316"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9316"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" id="9278" systemItem="favorites"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5094" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9263" translatesAutoresizingMaskIntoConstraints="NO">
-                    <rect key="frame" x="710" y="124" width="240" height="44"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9263" id="9264">
-                        <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </tableViewCellContentView>
-                </tableViewCell>
             </objects>
             <point key="canvasLocation" x="652" y="-57"/>
         </scene>
         <scene sceneID="5095">
             <objects>
-                <tabBarController id="5096" sceneMemberID="viewController" customClass="settingPage" storyboardIdentifier="settingPage" automaticallyAdjustsScrollViewInsets="NO" autoresizesArchivedViewToFullSize="NO" title="Settings">
+                <tabBarController id="5096" sceneMemberID="viewController" customClass="settingPage" storyboardIdentifier="settingPage" automaticallyAdjustsScrollViewInsets="NO" autoresizesArchivedViewToFullSize="NO" title="Settings" modalTransitionStyle="flipHorizontal">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5099">
                         <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -208,14 +239,21 @@
                         <segue destination="5091" kind="relationship" relationship="viewControllers" id="5097"/>
                         <segue destination="5086" kind="relationship" relationship="viewControllers" id="5098"/>
                     </connections>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5100" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="8851" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                     <rect key="frame" x="20" y="440" width="240" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9306" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="260" y="372" width="46" height="30"/>
+                    <state key="normal" title="Reset">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </objects>
-            <point key="canvasLocation" x="-47" y="345"/>
+            <point key="canvasLocation" x="-28" y="348"/>
         </scene>
     </scenes>
     <resources>

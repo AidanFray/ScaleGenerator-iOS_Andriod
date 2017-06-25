@@ -31,7 +31,16 @@ namespace ScalesApp
             scaleText.UserInteractionEnabled = true;
             UITapGestureRecognizer tap = new UITapGestureRecognizer(Rnd_ScaleChange);
             scaleView.AddGestureRecognizer(tap);
-            
+
+            UIBarButtonItem button = new UIBarButtonItem()
+            {
+                Title = "Hello",
+                Enabled = true
+            };
+            //button.Clicked += HandleTouchUpInside;
+
+            NavigationItem.SetRightBarButtonItem(button, false);
+
         }
 
         public override void ViewWillAppear(bool animated)

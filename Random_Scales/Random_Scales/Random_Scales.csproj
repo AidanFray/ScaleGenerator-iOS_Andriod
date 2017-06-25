@@ -137,8 +137,8 @@
     <Compile Include="Controllers\DataViewController.designer.cs">
       <DependentUpon>DataViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\keyTabPage.cs" />
-    <Compile Include="Backend\keyTabPage.designer.cs">
+    <Compile Include="Backend\Settings\keyTabPage.cs" />
+    <Compile Include="Backend\Settings\keyTabPage.designer.cs">
       <DependentUpon>keyTabPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
@@ -156,12 +156,12 @@
     <Compile Include="Backend\scalePage.designer.cs">
       <DependentUpon>scalePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\settingPage.cs" />
-    <Compile Include="Backend\settingPage.designer.cs">
+    <Compile Include="Backend\Settings\settingPage.cs" />
+    <Compile Include="Backend\Settings\settingPage.designer.cs">
       <DependentUpon>settingPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\modesTabPage.cs" />
-    <Compile Include="Backend\modesTabPage.designer.cs">
+    <Compile Include="Backend\Settings\modesTabPage.cs" />
+    <Compile Include="Backend\Settings\modesTabPage.designer.cs">
       <DependentUpon>modesTabPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Shared\Settings.cs" />

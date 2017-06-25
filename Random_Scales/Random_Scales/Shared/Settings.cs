@@ -25,12 +25,16 @@ namespace ScalesApp.Shared
         {
             NSUserDefaults.StandardUserDefaults.SetBool(s.On, $"{type}_{keyNum.ToString()}");
         }
+        public static void SaveSwitchState(bool state, string type, int keyNum)
+        {
+            NSUserDefaults.StandardUserDefaults.SetBool(state, $"{type}_{keyNum.ToString()}");
+        }
         public static UISwitch LoadSwitchState(UISwitch s, string type, int keyNum)
         {
             s.SetState(NSUserDefaults.StandardUserDefaults.BoolForKey($"{type}_{keyNum.ToString()}"), false);
             return s;
         }
-        
+
         public static void LoadSettings()
         {
             //Loads scales
@@ -48,5 +52,17 @@ namespace ScalesApp.Shared
             }
         }
 
+        public static void ResetAll()
+        {
+            //Resets all mode and keys into selected
+            foreach (UISwitch _switch in KeyTabPage.switches)
+            {
+                _switch.SetState(true, true);
+            }
+            foreach (UISwitch _switch in ModesTabPage.switches)
+            {
+                _switch.SetState(true, true);
+            }
+        }
     }
 }
