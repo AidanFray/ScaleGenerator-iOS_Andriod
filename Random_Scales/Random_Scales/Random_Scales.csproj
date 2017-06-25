@@ -137,15 +137,15 @@
     <Compile Include="Controllers\DataViewController.designer.cs">
       <DependentUpon>DataViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\KeyTabPage.cs" />
-    <Compile Include="Backend\KeyTabPage.designer.cs">
-      <DependentUpon>KeyTabPage.cs</DependentUpon>
+    <Compile Include="Backend\keyTabPage.cs" />
+    <Compile Include="Backend\keyTabPage.designer.cs">
+      <DependentUpon>keyTabPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Backend\MainView.cs" />
-    <Compile Include="Backend\MainView.designer.cs">
-      <DependentUpon>MainView.cs</DependentUpon>
+    <Compile Include="Backend\menuPage.cs" />
+    <Compile Include="Backend\menuPage.designer.cs">
+      <DependentUpon>menuPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Controllers\RootViewController.cs" />
     <Compile Include="Controllers\RootViewController.designer.cs">
@@ -156,13 +156,13 @@
     <Compile Include="Backend\scalePage.designer.cs">
       <DependentUpon>scalePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\settingPage.cs" />
-    <Compile Include="Controllers\settingPage.designer.cs">
+    <Compile Include="Backend\settingPage.cs" />
+    <Compile Include="Backend\settingPage.designer.cs">
       <DependentUpon>settingPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\ModesTabPage.cs" />
-    <Compile Include="Backend\ModesTabPage.designer.cs">
-      <DependentUpon>ModesTabPage.cs</DependentUpon>
+    <Compile Include="Backend\modesTabPage.cs" />
+    <Compile Include="Backend\modesTabPage.designer.cs">
+      <DependentUpon>modesTabPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Shared\Settings.cs" />
   </ItemGroup>

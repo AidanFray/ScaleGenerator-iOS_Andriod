@@ -4,7 +4,7 @@ using CoreGraphics;
 using Foundation;
 using UIKit;
 
-namespace App2
+namespace ScalesApp
 {
 	public partial class RootViewController : UIViewController
 	{

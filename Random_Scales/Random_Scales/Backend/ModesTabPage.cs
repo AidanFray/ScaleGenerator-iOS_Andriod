@@ -1,10 +1,10 @@
-﻿using App2.Shared;
+﻿using ScalesApp.Shared;
 using CoreGraphics;
 using Foundation;
 using System;
 using System.Collections.Generic;
 using UIKit;
-namespace App2
+namespace ScalesApp
 {
     public partial class ModesTabPage : UIViewController
     {

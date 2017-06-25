@@ -3,7 +3,7 @@
 using Foundation;
 using UIKit;
 
-namespace App2
+namespace ScalesApp
 {
 	public class ModelController : UIPageViewControllerDataSource
 	{

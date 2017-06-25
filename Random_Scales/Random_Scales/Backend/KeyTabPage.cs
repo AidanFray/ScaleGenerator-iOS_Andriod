@@ -3,9 +3,9 @@ using System;
 using UIKit;
 using CoreGraphics;
 using System.Collections.Generic;
-using App2.Shared;
+using ScalesApp.Shared;
 
-namespace App2
+namespace ScalesApp
 {
     public partial class KeyTabPage : UIViewController
     {

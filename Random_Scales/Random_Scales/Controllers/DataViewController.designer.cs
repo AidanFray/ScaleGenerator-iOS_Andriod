@@ -8,7 +8,7 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace App2
+namespace ScalesApp
 {
     [Register ("DataViewController")]
     partial class DataViewController

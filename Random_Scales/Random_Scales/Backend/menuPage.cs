@@ -1,9 +1,9 @@
 ﻿using Foundation;
 using System;
 using UIKit;
-using App2.Shared;
+using ScalesApp.Shared;
 
-namespace App2
+namespace ScalesApp
 {
     public partial class MainView : UIViewController
     {
@@ -24,6 +24,7 @@ namespace App2
             base.ViewDidAppear(animated);
             
             Settings.LoadSettings();
+            
         }
         
         partial void ScalesButton_TouchUpInside(UIButton sender)

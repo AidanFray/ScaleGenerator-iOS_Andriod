@@ -1,7 +1,7 @@
 ﻿using System;
 using UIKit;
 
-namespace App2
+namespace ScalesApp
 {
 	public partial class DataViewController : UIViewController
 	{

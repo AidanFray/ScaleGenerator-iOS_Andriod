@@ -7,7 +7,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 
-namespace App2.Shared
+namespace ScalesApp.Shared
 {
     public static class Settings
     {

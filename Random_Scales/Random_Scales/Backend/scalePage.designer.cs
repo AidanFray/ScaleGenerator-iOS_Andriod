@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace App2
+namespace ScalesApp
 {
     [Register ("scalePage")]
     partial class scalePage
