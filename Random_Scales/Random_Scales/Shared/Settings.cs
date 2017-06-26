@@ -11,11 +11,9 @@ namespace ScalesApp.Shared
 {
     public static class Settings
     {
-        //The settings for scales
-        //This is used in conjunction with scales
-        public static List<bool> activeScales = new List<bool>();
-        public static string[] scales = new string[]
-       {"C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"};
+        public static List<bool> activeKeys = new List<bool>();
+        public static string[] keys = new string[]
+        {"C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"};
 
         public static List<bool> activeModes = new List<bool>();
         public static string[] modes = new string[]
@@ -38,10 +36,10 @@ namespace ScalesApp.Shared
         public static void LoadSettings()
         {
             //Loads scales
-            activeScales.Clear();
-            for (int i = 0; i < scales.Length; i++)
+            activeKeys.Clear();
+            for (int i = 0; i < keys.Length; i++)
             {
-                activeScales.Add(NSUserDefaults.StandardUserDefaults.BoolForKey($"keys_{i.ToString()}"));
+                activeKeys.Add(NSUserDefaults.StandardUserDefaults.BoolForKey($"keys_{i.ToString()}"));
             }
 
             //Loads modes
@@ -54,15 +52,25 @@ namespace ScalesApp.Shared
 
         public static void ResetAll()
         {
-            //Resets all mode and keys into selected
-            foreach (UISwitch _switch in KeyTabPage.switches)
+            //Used to distinguish between which setting page is viewable
+            if (KeyTabPage.Page != null)
             {
-                _switch.SetState(true, true);
+                //Resets all mode and keys into selected
+                foreach (UISwitch _switch in KeyTabPage.Page.PageSwitches)
+                {
+                    _switch.SetState(true, true);
+                }
             }
-            foreach (UISwitch _switch in ModesTabPage.switches)
+
+            if (ModesTabPage.Page != null)
             {
-                _switch.SetState(true, true);
+                foreach (UISwitch _switch in ModesTabPage.Page.PageSwitches)
+                {
+                    _switch.SetState(true, true);
+                }
             }
+
+
         }
     }
 }

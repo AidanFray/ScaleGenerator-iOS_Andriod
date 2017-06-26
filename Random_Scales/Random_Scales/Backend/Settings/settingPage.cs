@@ -7,15 +7,16 @@ namespace ScalesApp
 {
     public partial class settingPage : UITabBarController
     {
-        public settingPage(IntPtr handle) : base(handle)
-        {
-
-        }
+        public settingPage(IntPtr handle) : base(handle) {}
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            Create_ResetButton();
+        }
 
+        void Create_ResetButton()
+        {
             UIBarButtonItem button = new UIBarButtonItem()
             {
                 Title = "Reset All",
@@ -23,10 +24,10 @@ namespace ScalesApp
             };
             button.Clicked += HandleTouchUpInside;
 
-            this.NavigationItem.SetRightBarButtonItem(button, false);
-
+            NavigationItem.SetRightBarButtonItem(button, false);
         }
 
+        //Reset_Button TouchUpInside Handle
         void HandleTouchUpInside(object sender, EventArgs ea)
         {
             Settings.ResetAll();

@@ -4,6 +4,7 @@
 //TODO: [Bug] Having no items selected causes a crash
 //TODO: Expanded scale view
 //TODO: Variable naming convention needs to be consistent
+//TODO: Rename scales for keys!
 
 namespace ScalesApp
 {
