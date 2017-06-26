@@ -139,5 +139,11 @@ namespace ScalesApp
             }
             return temp;
         }
+
+        partial void ExpandButton_TouchUpInside(UIButton sender)
+        {
+            sender.Hidden = !sender.Hidden;
+            ExpandedViewLabel.Hidden = false;
+        }
     }
 }

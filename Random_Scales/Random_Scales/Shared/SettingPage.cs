@@ -71,7 +71,7 @@ namespace ScalesApp.Shared
             UILabel label = new UILabel()
             {
                 Text = txt,
-                Frame = new CoreGraphics.CGRect(10, _position, _view.Frame.Width, _spacing),
+                Frame = new CoreGraphics.CGRect(5, _position, _view.Frame.Width, _spacing),
                 Hidden = false
             };
 

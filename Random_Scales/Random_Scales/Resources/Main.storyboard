@@ -115,18 +115,39 @@
                             <mask key="subviews">
                                 <include reference="536"/>
                                 <include reference="9287"/>
+                                <include reference="9532"/>
+                                <include reference="9534"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9535"/>
+                                <include reference="9536"/>
                             </mask>
                         </variation>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="536" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="70" y="260" width="236" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="536" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="70" y="194" width="236" height="120"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9287" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="0.0" y="367" width="375" height="83"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9287" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" clipsSubviews="YES">
+                                <rect key="frame" x="60" y="318" width="256" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9532" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="17" y="627" width="88" height="30"/>
+                                <state key="normal" title="Expand View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ExpandButton_TouchUpInside:" destination="564" id="9553" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expanded shit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9534" translatesAutoresizingMaskIntoConstraints="NO" hidden="YES">
+                                <rect key="frame" x="126" y="490" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -135,13 +156,27 @@
                             <mask key="subviews">
                                 <exclude reference="536"/>
                                 <exclude reference="9287"/>
+                                <exclude reference="9532"/>
+                                <exclude reference="9534"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9535"/>
+                                <exclude reference="9536"/>
                             </mask>
                         </variation>
+                        <constraints>
+                            <constraint id="9535" firstItem="2305" firstAttribute="leadingMargin" secondItem="9532" secondAttribute="leading" constant="16">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-5"/>
+                            </constraint>
+                            <constraint id="9536" firstItem="2305" firstAttribute="bottom" secondItem="9532" secondAttribute="bottom" constant="10"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scaleText" destination="536" id="name-outlet-536"/>
                         <outlet property="scaleView" destination="2305" id="name-outlet-2305"/>
                         <outlet property="modeText" destination="9287" id="name-outlet-9287"/>
+                        <outlet property="ExpandButton" destination="9532" id="name-outlet-9532"/>
+                        <outlet property="ExpandedViewLabel" destination="9534" id="name-outlet-9534"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="566" userLabel="First Responder" sceneMemberID="firstResponder"/>

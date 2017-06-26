@@ -16,6 +16,14 @@ namespace ScalesApp
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton ExpandButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel ExpandedViewLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel modeText { get; set; }
 
         [Outlet]
@@ -26,8 +34,22 @@ namespace ScalesApp
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView scaleView { get; set; }
 
+        [Action ("ExpandButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void ExpandButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
+            if (ExpandButton != null) {
+                ExpandButton.Dispose ();
+                ExpandButton = null;
+            }
+
+            if (ExpandedViewLabel != null) {
+                ExpandedViewLabel.Dispose ();
+                ExpandedViewLabel = null;
+            }
+
             if (modeText != null) {
                 modeText.Dispose ();
                 modeText = null;
