@@ -1,0 +1,23 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "images" : [
+    {
+      "filename" : "Gb_Whole-Tone~iphone@1x.png",
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Gb_Whole-Tone~iphone@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Gb_Whole-Tone~iphone@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x"
+    }
+  ]
+}

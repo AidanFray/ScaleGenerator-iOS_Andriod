@@ -17,7 +17,7 @@ namespace ScalesApp.Shared
 
         public static List<bool> activeModes = new List<bool>();
         public static string[] modes = new string[]
-        {"Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", "Locrian", "Whole-Tone", "Blues", "Super-Locrian (Alt)"};
+        {"Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", "Locrian", "Whole-Tone", "Super-Locrian (Alt)"};
 
         public static void SaveSwitchState(UISwitch s, string type, int keyNum)
         {

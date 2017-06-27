@@ -11,7 +11,7 @@
             <objects>
                 <navigationController id="204" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="206">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="667" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <variation key="heightClass=regular-widthClass=compact">
                             <color key="barTintColor" colorSpace="calibratedRGB" red="0.83921568627450982" green="0.32156862745098042" blue="0.32156862745098042" alpha="1"/>
@@ -37,7 +37,7 @@
                         <viewControllerLayoutGuide type="bottom" id="247"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="250" opaque="NO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2306" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -107,7 +107,7 @@
                         <viewControllerLayoutGuide type="bottom" id="562"/>
                     </layoutGuides>
                     <view contentMode="scaleToFill" id="2305" key="view" clearsContextBeforeDrawing="NO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -116,7 +116,7 @@
                                 <include reference="536"/>
                                 <include reference="9287"/>
                                 <include reference="9532"/>
-                                <include reference="9534"/>
+                                <include reference="9580"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="9535"/>
@@ -137,7 +137,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9532" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="17" y="627" width="88" height="30"/>
+                                <rect key="frame" x="144" y="629" width="88" height="30"/>
                                 <state key="normal" title="Expand View">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -145,9 +145,24 @@
                                     <action selector="ExpandButton_TouchUpInside:" destination="564" id="9553" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expanded shit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9534" translatesAutoresizingMaskIntoConstraints="NO" hidden="YES">
-                                <rect key="frame" x="126" y="490" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9571" translatesAutoresizingMaskIntoConstraints="NO" highlighted="YES" fixedFrame="YES">
+                                <rect key="frame" x="44" y="262" width="578" height="63"/>
+                                <variation key="heightClass=compact-widthClass=compact" image="B_Mixolydian" fixedFrame="YES"/>
+                                <rect key="contentStretch" x="0" y="0.0" width="1" height="1"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9580" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="22" y="435" width="331" height="58"/>
+                                <variation key="heightClass=regular-widthClass=compact" image="A#_Super_Locrian" fixedFrame="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9590" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="248" y="81" width="170" height="87"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9593" translatesAutoresizingMaskIntoConstraints="NO" text="Aeolian">
+                                <rect key="frame" x="202" y="187" width="263" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -157,7 +172,10 @@
                                 <exclude reference="536"/>
                                 <exclude reference="9287"/>
                                 <exclude reference="9532"/>
-                                <exclude reference="9534"/>
+                                <exclude reference="9571"/>
+                                <exclude reference="9580"/>
+                                <exclude reference="9590"/>
+                                <exclude reference="9593"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="9535"/>
@@ -170,13 +188,24 @@
                             </constraint>
                             <constraint id="9536" firstItem="2305" firstAttribute="bottom" secondItem="9532" secondAttribute="bottom" constant="10"/>
                         </constraints>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="9571"/>
+                                <include reference="9590"/>
+                                <include reference="9593"/>
+                            </mask>
+                            <color key="tintColor" colorSpace="calibratedRGB" red="0.35294117647058826" green="0" blue="0" alpha="1"/>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="scaleText" destination="536" id="name-outlet-536"/>
                         <outlet property="scaleView" destination="2305" id="name-outlet-2305"/>
                         <outlet property="modeText" destination="9287" id="name-outlet-9287"/>
                         <outlet property="ExpandButton" destination="9532" id="name-outlet-9532"/>
-                        <outlet property="ExpandedViewLabel" destination="9534" id="name-outlet-9534"/>
+                        <outlet property="ScalePhotoRotated" destination="9571" id="name-outlet-9571"/>
+                        <outlet property="ScalePhoto" destination="9580" id="name-outlet-9580"/>
+                        <outlet property="modeTextRotated" destination="9593" id="name-outlet-9593"/>
+                        <outlet property="scaleTextRotated" destination="9590" id="name-outlet-9590"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="566" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,7 +220,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5082"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5087">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
@@ -222,7 +251,7 @@
                         <outlet property="test" destination="9316" id="name-outlet-9316"/>
                     </connections>
                     <view contentMode="scaleToFill" id="9269" key="view">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -266,7 +295,7 @@
             <objects>
                 <tabBarController id="5096" sceneMemberID="viewController" customClass="settingPage" storyboardIdentifier="settingPage" automaticallyAdjustsScrollViewInsets="NO" autoresizesArchivedViewToFullSize="NO" title="Settings" modalTransitionStyle="flipHorizontal">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="5099">
-                        <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                        <rect key="frame" x="0.0" y="326" width="667" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -304,9 +333,312 @@
         <image name="ios/AppIcon.appiconset/Icon-App-83.5x83.5.png" width="83.5" height="83.5"/>
         <image name="ios/AppIcon.appiconset/Icon-Small-50x50.png" width="50" height="50"/>
         <image name="ios/iTunesArtwork.png" width="512" height="512"/>
+        <image name="Scales/A#_Lydian.png" width="2169" height="246"/>
+        <image name="Scales/A#_Mixolydian.png" width="2169" height="246"/>
+        <image name="Scales/A#_Phrygian.png" width="2169" height="246"/>
+        <image name="Scales/A#_Super_Locrian.png" width="2169" height="246"/>
+        <image name="Scales/A#_Whole-Tone.png" width="2169" height="246"/>
+        <image name="Scales/A_Aeolian.png" width="2169" height="230"/>
+        <image name="Scales/A_Dorian.png" width="2169" height="230"/>
+        <image name="Scales/A_Ionian.png" width="2169" height="230"/>
+        <image name="Scales/A_Locrian.png" width="2169" height="230"/>
+        <image name="Scales/A_Lydian.png" width="2169" height="230"/>
+        <image name="Scales/A_Mixolydian.png" width="2169" height="230"/>
+        <image name="Scales/A_Phrygian.png" width="2169" height="230"/>
+        <image name="Scales/A_Super_Locrian.png" width="2169" height="230"/>
+        <image name="Scales/A_Whole-Tone.png" width="2169" height="235"/>
+        <image name="Scales/Ab_Aeolian.png" width="2169" height="239"/>
+        <image name="Scales/Ab_Dorian.png" width="2169" height="239"/>
+        <image name="Scales/Ab_Ionian.png" width="2169" height="239"/>
+        <image name="Scales/Ab_Locrian.png" width="2169" height="239"/>
+        <image name="Scales/Ab_Lydian.png" width="2169" height="239"/>
+        <image name="Scales/Ab_Mixolydian.png" width="2169" height="239"/>
+        <image name="Scales/Ab_Phrygian.png" width="2169" height="239"/>
+        <image name="Scales/Ab_Super_Locrian.png" width="2169" height="243"/>
+        <image name="Scales/Ab_Whole-Tone.png" width="2169" height="239"/>
+        <image name="Scales/B_Aeolian.png" width="2169" height="235"/>
+        <image name="Scales/B_Dorian.png" width="2169" height="235"/>
+        <image name="Scales/B_Ionian.png" width="2169" height="235"/>
+        <image name="Scales/B_Locrian.png" width="2169" height="235"/>
+        <image name="Scales/B_Lydian.png" width="2169" height="235"/>
+        <image name="Scales/B_Mixolydian.png" width="2169" height="235"/>
+        <image name="Scales/B_Phrygian.png" width="2169" height="235"/>
+        <image name="Scales/B_Super_Locrian.png" width="2169" height="235"/>
+        <image name="Scales/B_Whole-Tone.png" width="2169" height="235"/>
+        <image name="Scales/Bb_Aeolian.png" width="2169" height="235"/>
+        <image name="Scales/Bb_Dorian.png" width="2169" height="235"/>
+        <image name="Scales/Bb_Ionian.png" width="2169" height="235"/>
+        <image name="Scales/Bb_Locrian.png" width="2169" height="235"/>
+        <image name="Scales/Bb_Lydian.png" width="2169" height="235"/>
+        <image name="Scales/Bb_Mixolydian.png" width="2169" height="235"/>
+        <image name="Scales/Bb_Phrygian.png" width="2169" height="235"/>
+        <image name="Scales/Bb_Super_Locrian.png" width="2169" height="237"/>
+        <image name="Scales/Bb_Whole-Tone.png" width="2169" height="237"/>
+        <image name="Scales/C#_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/C#_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/C#_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/C#_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/C#_Lydian.png" width="2169" height="210"/>
+        <image name="Scales/C#_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/C#_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/C#_Super_Locrian.png" width="2169" height="214"/>
+        <image name="Scales/C#_Whole-Tone.png" width="2169" height="214"/>
+        <image name="Scales/C_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/C_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/C_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/C_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/C_Lydian.png" width="2169" height="210"/>
+        <image name="Scales/C_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/C_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/C_Super_Locrian.png" width="2169" height="212"/>
+        <image name="Scales/C_Whole-Tone.png" width="2169" height="210"/>
+        <image name="Scales/D#_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/D#_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/D#_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/D#_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/D#_Lydian.png" width="2169" height="210"/>
+        <image name="Scales/D#_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/D#_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/D#_Super_Locrian.png" width="2169" height="213"/>
+        <image name="Scales/D#_Whole-Tone.png" width="2169" height="216"/>
+        <image name="Scales/D_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/D_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/D_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/D_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/D_Lydian.png" width="2169" height="211"/>
+        <image name="Scales/D_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/D_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/D_Super_Locrian.png" width="2169" height="214"/>
+        <image name="Scales/D_Whole-Tone.png" width="2169" height="214"/>
+        <image name="Scales/Db_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/Db_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/Db_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/Db_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/Db_Lydian.png" width="2169" height="211"/>
+        <image name="Scales/Db_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/Db_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/Db_Super_Locrian.png" width="2169" height="215"/>
+        <image name="Scales/Db_Whole-Tone.png" width="2169" height="214"/>
+        <image name="Scales/E_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/E_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/E_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/E_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/E_Lydian.png" width="2169" height="213"/>
+        <image name="Scales/E_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/E_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/E_Super_Locrian.png" width="2169" height="213"/>
+        <image name="Scales/E_Whole-Tone.png" width="2169" height="214"/>
+        <image name="Scales/Eb_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/Eb_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/Eb_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/Eb_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/Eb_Lydian.png" width="2169" height="210"/>
+        <image name="Scales/Eb_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/Eb_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/Eb_Super_Locrian.png" width="2169" height="216"/>
+        <image name="Scales/Eb_Whole-Tone.png" width="2169" height="214"/>
+        <image name="Scales/F#_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/F#_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/F#_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/F#_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/F#_Lydian.png" width="2169" height="212"/>
+        <image name="Scales/F#_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/F#_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/F#_Super_Locrian.png" width="2169" height="212"/>
+        <image name="Scales/F#_Whole-Tone.png" width="2169" height="214"/>
+        <image name="Scales/F_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/F_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/F_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/F_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/F_Lydian.png" width="2169" height="210"/>
+        <image name="Scales/F_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/F_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/F_Super_Locrian.png" width="2169" height="214"/>
+        <image name="Scales/F_Whole-Tone.png" width="2169" height="213"/>
+        <image name="Scales/G#_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/G#_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/G#_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/G#_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/G#_Lydian.png" width="2169" height="210"/>
+        <image name="Scales/G#_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/G#_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/G#_Super_Locrian.png" width="2169" height="214"/>
+        <image name="Scales/G#_Whole-Tone.png" width="2169" height="213"/>
+        <image name="Scales/G_Aeolian.png" width="2169" height="210"/>
+        <image name="Scales/G_Dorian.png" width="2169" height="210"/>
+        <image name="Scales/G_Ionian.png" width="2169" height="210"/>
+        <image name="Scales/G_Locrian.png" width="2169" height="210"/>
+        <image name="Scales/G_Lydian.png" width="2169" height="212"/>
+        <image name="Scales/G_Mixolydian.png" width="2169" height="210"/>
+        <image name="Scales/G_Phrygian.png" width="2169" height="210"/>
+        <image name="Scales/G_Super_Locrian.png" width="2169" height="211"/>
+        <image name="Scales/G_Whole-Tone.png" width="2169" height="213"/>
+        <image name="Scales/Gb_Aeolian.png" width="2169" height="214"/>
+        <image name="Scales/Gb_Dorian.png" width="2169" height="214"/>
+        <image name="Scales/Gb_Ionian.png" width="2169" height="214"/>
+        <image name="Scales/Gb_Locrian.png" width="2169" height="214"/>
+        <image name="Scales/Gb_Lydian.png" width="2169" height="216"/>
+        <image name="Scales/Gb_Mixolydian.png" width="2169" height="214"/>
+        <image name="Scales/Gb_Phrygian.png" width="2169" height="214"/>
+        <image name="Scales/Gb_Super_Locrian.png" width="2169" height="214"/>
+        <image name="Scales/Gb_Whole-Tone.png" width="2169" height="218"/>
+        <image name="A#_Aeolian" width="723" height="82"/>
+        <image name="A#_Dorian" width="723" height="82"/>
+        <image name="A#_Ionian" width="723" height="82"/>
+        <image name="A#_Locrian" width="723" height="82"/>
+        <image name="A#_Lydian" width="723" height="82"/>
+        <image name="A#_Mixolydian" width="723" height="82"/>
+        <image name="A#_Phrygian" width="723" height="82"/>
+        <image name="A#_Super_Locrian" width="723" height="82"/>
+        <image name="A#_Whole-Tone" width="723" height="82"/>
+        <image name="A_Aeolian" width="723" height="76.6666641"/>
+        <image name="A_Dorian" width="723" height="76.6666641"/>
+        <image name="A_Ionian" width="723" height="76.6666641"/>
+        <image name="A_Locrian" width="723" height="76.6666641"/>
+        <image name="A_Lydian" width="723" height="76.6666641"/>
+        <image name="A_Mixolydian" width="723" height="76.6666641"/>
+        <image name="A_Phrygian" width="723" height="76.6666641"/>
+        <image name="A_Super_Locrian" width="723" height="76.6666641"/>
+        <image name="A_Whole-Tone" width="723" height="78.3333359"/>
+        <image name="Ab_Aeolian" width="723" height="79.6666641"/>
+        <image name="Ab_Dorian" width="723" height="79.6666641"/>
+        <image name="Ab_Ionian" width="723" height="79.6666641"/>
+        <image name="Ab_Locrian" width="723" height="79.6666641"/>
+        <image name="Ab_Lydian" width="723" height="79.6666641"/>
+        <image name="Ab_Mixolydian" width="723" height="79.6666641"/>
+        <image name="Ab_Phrygian" width="723" height="79.6666641"/>
+        <image name="Ab_Super_Locrian" width="723" height="81"/>
+        <image name="Ab_Whole-Tone" width="723" height="79.6666641"/>
+        <image name="B_Aeolian" width="723" height="78.3333359"/>
+        <image name="B_Dorian" width="723" height="78.3333359"/>
+        <image name="B_Ionian" width="723" height="78.3333359"/>
+        <image name="B_Locrian" width="723" height="78.3333359"/>
+        <image name="B_Lydian" width="723" height="78.3333359"/>
+        <image name="B_Mixolydian" width="723" height="78.3333359"/>
+        <image name="B_Phrygian" width="723" height="78.3333359"/>
+        <image name="B_Super_Locrian" width="723" height="78.3333359"/>
+        <image name="B_Whole-Tone" width="723" height="78.3333359"/>
+        <image name="Bb_Aeolian" width="723" height="78.3333359"/>
+        <image name="Bb_Dorian" width="723" height="78.3333359"/>
+        <image name="Bb_Ionian" width="723" height="78.3333359"/>
+        <image name="Bb_Locrian" width="723" height="78.3333359"/>
+        <image name="Bb_Lydian" width="723" height="78.3333359"/>
+        <image name="Bb_Mixolydian" width="723" height="78.3333359"/>
+        <image name="Bb_Phrygian" width="723" height="78.3333359"/>
+        <image name="Bb_Super_Locrian" width="723" height="79"/>
+        <image name="Bb_Whole-Tone" width="723" height="79"/>
+        <image name="C#_Aeolian" width="723" height="70"/>
+        <image name="C#_Dorian" width="723" height="70"/>
+        <image name="C#_Ionian" width="723" height="70"/>
+        <image name="C#_Locrian" width="723" height="70"/>
+        <image name="C#_Lydian" width="723" height="70"/>
+        <image name="C#_Mixolydian" width="723" height="70"/>
+        <image name="C#_Phrygian" width="723" height="70"/>
+        <image name="C#_Super_Locrian" width="723" height="71.3333359"/>
+        <image name="C#_Whole-Tone" width="723" height="71.3333359"/>
+        <image name="C_Aeolian" width="723" height="70"/>
+        <image name="C_Dorian" width="723" height="70"/>
+        <image name="C_Ionian" width="723" height="70"/>
+        <image name="C_Locrian" width="723" height="70"/>
+        <image name="C_Lydian" width="723" height="70"/>
+        <image name="C_Mixolydian" width="723" height="70"/>
+        <image name="C_Phrygian" width="723" height="70"/>
+        <image name="C_Super_Locrian" width="723" height="70.6666641"/>
+        <image name="C_Whole-Tone" width="723" height="70"/>
+        <image name="D#_Aeolian" width="723" height="70"/>
+        <image name="D#_Dorian" width="723" height="70"/>
+        <image name="D#_Ionian" width="723" height="70"/>
+        <image name="D#_Locrian" width="723" height="70"/>
+        <image name="D#_Lydian" width="723" height="70"/>
+        <image name="D#_Mixolydian" width="723" height="70"/>
+        <image name="D#_Phrygian" width="723" height="70"/>
+        <image name="D#_Super_Locrian" width="723" height="71"/>
+        <image name="D#_Whole-Tone" width="723" height="72"/>
+        <image name="D_Aeolian" width="723" height="70"/>
+        <image name="D_Dorian" width="723" height="70"/>
+        <image name="D_Ionian" width="723" height="70"/>
+        <image name="D_Locrian" width="723" height="70"/>
+        <image name="D_Lydian" width="723" height="70.3333359"/>
+        <image name="D_Mixolydian" width="723" height="70"/>
+        <image name="D_Phrygian" width="723" height="70"/>
+        <image name="D_Super_Locrian" width="723" height="71.3333359"/>
+        <image name="D_Whole-Tone" width="723" height="71.3333359"/>
+        <image name="Db_Aeolian" width="723" height="70"/>
+        <image name="Db_Dorian" width="723" height="70"/>
+        <image name="Db_Ionian" width="723" height="70"/>
+        <image name="Db_Locrian" width="723" height="70"/>
+        <image name="Db_Lydian" width="723" height="70.3333359"/>
+        <image name="Db_Mixolydian" width="723" height="70"/>
+        <image name="Db_Phrygian" width="723" height="70"/>
+        <image name="Db_Super_Locrian" width="723" height="71.6666641"/>
+        <image name="Db_Whole-Tone" width="723" height="71.3333359"/>
+        <image name="E_Aeolian" width="723" height="70"/>
+        <image name="E_Dorian" width="723" height="70"/>
+        <image name="E_Ionian" width="723" height="70"/>
+        <image name="E_Locrian" width="723" height="70"/>
+        <image name="E_Lydian" width="723" height="71"/>
+        <image name="E_Mixolydian" width="723" height="70"/>
+        <image name="E_Phrygian" width="723" height="70"/>
+        <image name="E_Super_Locrian" width="723" height="71"/>
+        <image name="E_Whole-Tone" width="723" height="71.3333359"/>
+        <image name="Eb_Aeolian" width="723" height="70"/>
+        <image name="Eb_Dorian" width="723" height="70"/>
+        <image name="Eb_Ionian" width="723" height="70"/>
+        <image name="Eb_Locrian" width="723" height="70"/>
+        <image name="Eb_Lydian" width="723" height="70"/>
+        <image name="Eb_Mixolydian" width="723" height="70"/>
+        <image name="Eb_Phrygian" width="723" height="70"/>
+        <image name="Eb_Super_Locrian" width="723" height="72"/>
+        <image name="Eb_Whole-Tone" width="723" height="71.3333359"/>
+        <image name="F#_Aeolian" width="723" height="70"/>
+        <image name="F#_Dorian" width="723" height="70"/>
+        <image name="F#_Ionian" width="723" height="70"/>
+        <image name="F#_Locrian" width="723" height="70"/>
+        <image name="F#_Lydian" width="723" height="70.6666641"/>
+        <image name="F#_Mixolydian" width="723" height="70"/>
+        <image name="F#_Phrygian" width="723" height="70"/>
+        <image name="F#_Super_Locrian" width="723" height="70.6666641"/>
+        <image name="F#_Whole-Tone" width="723" height="71.3333359"/>
+        <image name="F_Aeolian" width="723" height="70"/>
+        <image name="F_Dorian" width="723" height="70"/>
+        <image name="F_Ionian" width="723" height="70"/>
+        <image name="F_Locrian" width="723" height="70"/>
+        <image name="F_Lydian" width="723" height="70"/>
+        <image name="F_Mixolydian" width="723" height="70"/>
+        <image name="F_Phrygian" width="723" height="70"/>
+        <image name="F_Super_Locrian" width="723" height="71.3333359"/>
+        <image name="F_Whole-Tone" width="723" height="71"/>
+        <image name="G#_Aeolian" width="723" height="70"/>
+        <image name="G#_Dorian" width="723" height="70"/>
+        <image name="G#_Ionian" width="723" height="70"/>
+        <image name="G#_Locrian" width="723" height="70"/>
+        <image name="G#_Lydian" width="723" height="70"/>
+        <image name="G#_Mixolydian" width="723" height="70"/>
+        <image name="G#_Phrygian" width="723" height="70"/>
+        <image name="G#_Super_Locrian" width="723" height="71.3333359"/>
+        <image name="G#_Whole-Tone" width="723" height="71"/>
+        <image name="G_Aeolian" width="723" height="70"/>
+        <image name="G_Dorian" width="723" height="70"/>
+        <image name="G_Ionian" width="723" height="70"/>
+        <image name="G_Locrian" width="723" height="70"/>
+        <image name="G_Lydian" width="723" height="70.6666641"/>
+        <image name="G_Mixolydian" width="723" height="70"/>
+        <image name="G_Phrygian" width="723" height="70"/>
+        <image name="G_Super_Locrian" width="723" height="70.3333359"/>
+        <image name="G_Whole-Tone" width="723" height="71"/>
+        <image name="Gb_Aeolian" width="723" height="71.3333359"/>
+        <image name="Gb_Dorian" width="723" height="71.3333359"/>
+        <image name="Gb_Ionian" width="723" height="71.3333359"/>
+        <image name="Gb_Locrian" width="723" height="71.3333359"/>
+        <image name="Gb_Lydian" width="723" height="72"/>
+        <image name="Gb_Mixolydian" width="723" height="71.3333359"/>
+        <image name="Gb_Phrygian" width="723" height="71.3333359"/>
+        <image name="Gb_Super_Locrian" width="723" height="71.3333359"/>
+        <image name="Gb_Whole-Tone" width="723" height="72.6666641"/>
     </resources>
     <color key="tintColor" colorSpace="calibratedRGB" red="0.35294117647058826" green="0" blue="0" alpha="1"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina47"/>
+        <simulatedOrientationMetrics key="orientation"/>
     </simulatedMetricsContainer>
 </document>

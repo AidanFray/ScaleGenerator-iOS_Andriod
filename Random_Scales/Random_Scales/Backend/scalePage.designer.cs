@@ -20,15 +20,27 @@ namespace ScalesApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel ExpandedViewLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel modeText { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel modeTextRotated { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView ScalePhoto { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView ScalePhotoRotated { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel scaleText { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel scaleTextRotated { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -45,19 +57,34 @@ namespace ScalesApp
                 ExpandButton = null;
             }
 
-            if (ExpandedViewLabel != null) {
-                ExpandedViewLabel.Dispose ();
-                ExpandedViewLabel = null;
-            }
-
             if (modeText != null) {
                 modeText.Dispose ();
                 modeText = null;
             }
 
+            if (modeTextRotated != null) {
+                modeTextRotated.Dispose ();
+                modeTextRotated = null;
+            }
+
+            if (ScalePhoto != null) {
+                ScalePhoto.Dispose ();
+                ScalePhoto = null;
+            }
+
+            if (ScalePhotoRotated != null) {
+                ScalePhotoRotated.Dispose ();
+                ScalePhotoRotated = null;
+            }
+
             if (scaleText != null) {
                 scaleText.Dispose ();
                 scaleText = null;
+            }
+
+            if (scaleTextRotated != null) {
+                scaleTextRotated.Dispose ();
+                scaleTextRotated = null;
             }
 
             if (scaleView != null) {

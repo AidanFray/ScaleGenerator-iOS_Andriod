@@ -41,7 +41,7 @@ namespace ScalesApp
             SetupScaleShuffle();
         }
 
-        public void ApplySettings()
+        private void ApplySettings()
         {
             _keyPool.Clear();
             for (int i = 0; i < Settings.activeKeys.Count; i++)
@@ -63,7 +63,7 @@ namespace ScalesApp
                 }
             }
         }
-        public void Rnd_ScaleChange()
+        private void Rnd_ScaleChange()
         {
             //Checks if the pools need a refresh
             if (!PoolEmpty())
@@ -71,12 +71,33 @@ namespace ScalesApp
                 scaleText.Text = _currentScalePool[_positionInCurrentPool].get_key();
                 modeText.Text = _currentScalePool[_positionInCurrentPool].get_mode();
 
+                scaleTextRotated.Text = scaleText.Text;
+                modeTextRotated.Text = modeText.Text;
+                
                 _positionInCurrentPool++;
             }
             else
             {
                 SetupScaleShuffle();
             }
+
+            if (!ScalePhoto.Hidden)
+            {
+                ChangeScaleImage();
+            }
+        }
+        private void ChangeScaleImage()
+        {
+            if (modeText.Text == "Super-Locrian (Alt)")
+            {
+                ScalePhoto.Image = UIImage.FromBundle($"{scaleText.Text}_Super_Locrian");
+            }
+            else
+            {
+                ScalePhoto.Image = UIImage.FromBundle($"{scaleText.Text}_{modeText.Text}");
+               
+            }
+            ScalePhotoRotated.Image = ScalePhoto.Image;
         }
         private bool PoolEmpty()
         {
@@ -142,8 +163,15 @@ namespace ScalesApp
 
         partial void ExpandButton_TouchUpInside(UIButton sender)
         {
-            sender.Hidden = !sender.Hidden;
-            ExpandedViewLabel.Hidden = false;
+            if (ScalePhoto.Hidden)
+            {
+                ScalePhoto.Hidden = false;
+                ChangeScaleImage();
+            }
+            else
+            {
+                ScalePhoto.Hidden = true;
+            }
         }
     }
 }
