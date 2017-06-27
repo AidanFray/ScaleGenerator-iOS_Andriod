@@ -30,6 +30,10 @@ namespace ScalesApp
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void UIButton2315_TouchUpInside (UIKit.UIButton sender);
 
+        [Action ("UIButton9617_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void UIButton9617_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (mainView != null) {

@@ -8,8 +8,8 @@ namespace ScalesApp
     public partial class MainView : UIViewController
     {
         UIViewController ScaleRandomisePage;
-       
-        public MainView (IntPtr handle) : base (handle)
+
+        public MainView(IntPtr handle) : base(handle)
         {
         }
 
@@ -22,17 +22,22 @@ namespace ScalesApp
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            
+
             Settings.LoadSettings();
-            
+
         }
-        
+
         partial void ScalesButton_TouchUpInside(UIButton sender)
         {
             NavigationController.PushViewController(ScaleRandomisePage, true);
         }
 
         partial void UIButton2315_TouchUpInside(UIButton sender)
+        {
+
+        }
+
+        partial void UIButton9617_TouchUpInside(UIButton sender)
         {
             
         }

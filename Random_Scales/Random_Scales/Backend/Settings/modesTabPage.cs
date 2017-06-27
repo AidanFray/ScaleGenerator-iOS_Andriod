@@ -12,15 +12,14 @@ namespace ScalesApp
     {
         //Class that deals with creating page settings
         public static SettingPage Page;
-        
+
         public ModesTabPage(IntPtr handle) : base(handle)
         {
-            
-            Page = new SettingPage(View, Settings.modes, "modes");
         }
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            Page = new SettingPage(View, Settings.modes, "modes");
         }
         public override void ViewWillAppear(bool animated)
         {
@@ -31,6 +30,12 @@ namespace ScalesApp
         {
             base.ViewWillDisappear(animated);
             Page.WhenViewDisappears();
+        }
+        public override void WillAnimateRotation(UIInterfaceOrientation toInterfaceOrientation, double duration)
+        {
+            base.WillAnimateRotation(toInterfaceOrientation, duration);
+
+            Page.Screen_Rotate(toInterfaceOrientation);
         }
     }
 }

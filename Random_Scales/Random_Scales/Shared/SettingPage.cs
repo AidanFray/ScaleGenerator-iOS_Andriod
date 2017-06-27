@@ -21,18 +21,20 @@ namespace ScalesApp.Shared
         }
 
         public List<UISwitch> PageSwitches = new List<UISwitch>(); //List of switches
-        
+
         public UIView _view;
         private UIScrollView _scrollView;
         private string[] _menuItems;
         private string _savingID;
-        private const int _settingsStartPosition = 60;
-        private int _position = _settingsStartPosition;
+        public static int _settingsStartPosition = 60;
+        private int _position;
         private int _spacing = 50;
         private bool _alternate = false;
 
         public void WhenViewAppears()
         {
+
+
             Create_Controls();
             Load_Switches();
         }
@@ -43,26 +45,32 @@ namespace ScalesApp.Shared
 
         public void Create_Controls()
         {
-            //Checks to see if a subview has been added
-            if (!_view.Subviews.Contains(_scrollView))
+            //Refreshes to fix rotation problems
+            if (_view.Subviews.Contains(_scrollView))
             {
-                PageSwitches.Clear();
-                //Creates the Scroll View
-                _scrollView = new UIScrollView()
-                {
-                    Frame = new CGRect(0, 0, _view.Frame.Width, _view.Frame.Height),
-                    ContentSize = new CGSize(_view.Frame.Width, (_menuItems.Length * _spacing) + 100),
-                    ScrollEnabled = true
-                };
-
-                //Dynamically adds labels and switches
-                for (int i = 0; i < _menuItems.Length; i++)
-                {
-                    AddControls(_menuItems[i]);
-                }
-                _view.AddSubview(_scrollView);
-                _position = _settingsStartPosition;
+                Remove_Controls();
             }
+            
+            _position = _settingsStartPosition;
+
+            PageSwitches.Clear();
+            //Creates the Scroll View
+            _scrollView = new UIScrollView()
+            {
+                Frame = new CGRect(0, 0, _view.Frame.Width, _view.Frame.Height),
+                ContentSize = new CGSize(_view.Frame.Width, (_menuItems.Length * _spacing) + 100),
+                ScrollEnabled = true
+            };
+
+            //Dynamically adds labels and switches
+            for (int i = 0; i < _menuItems.Length; i++)
+            {
+                AddControls(_menuItems[i]);
+            }
+            _view.AddSubview(_scrollView);
+            _position = _settingsStartPosition;
+
+
 
         }
         private void AddControls(string txt)
@@ -117,6 +125,44 @@ namespace ScalesApp.Shared
             {
                 Settings.SaveSwitchState(PageSwitches[i], _savingID, i);
             }
+        }
+
+        public void Remove_Controls()
+        {
+            foreach (UIView sV in _view.Subviews)
+            {
+                if (sV is UIScrollView)
+                {
+                    sV.RemoveFromSuperview();
+                }
+                else //HACK: Button I can't find
+                {
+                    if (sV is UIButton)
+                    {
+                        UIButton b = (UIButton)sV;
+                        b.Hidden = true;
+                    }
+                }
+
+
+
+
+            }
+        }
+
+        public void Screen_Rotate(UIInterfaceOrientation toInterfaceOrientation)
+        {
+            Remove_Controls();
+            if (toInterfaceOrientation == UIInterfaceOrientation.LandscapeLeft ||
+                toInterfaceOrientation == UIInterfaceOrientation.LandscapeLeft)
+            {
+                _settingsStartPosition = 30;
+            }
+            else
+            {
+                _settingsStartPosition = 60;
+            };
+            WhenViewAppears();
         }
     }
 }

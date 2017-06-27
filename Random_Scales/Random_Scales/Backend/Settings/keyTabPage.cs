@@ -15,7 +15,7 @@ namespace ScalesApp
 
         public KeyTabPage(IntPtr handle) : base(handle)
         {
-            
+
         }
         public override void ViewDidLoad()
         {
@@ -35,6 +35,12 @@ namespace ScalesApp
         {
             base.ViewWillDisappear(animated);
             Page.WhenViewDisappears();
+        }
+        public override void WillAnimateRotation(UIInterfaceOrientation toInterfaceOrientation, double duration)
+        {
+            base.WillAnimateRotation(toInterfaceOrientation, duration);
+
+            Page.Screen_Rotate(toInterfaceOrientation);
         }
     }
 }
