@@ -3,7 +3,7 @@ using System;
 using UIKit;
 using ScalesApp.Shared;
 using System.Collections.Generic;
-
+using CoreGraphics;
 
 namespace ScalesApp
 {
@@ -26,6 +26,8 @@ namespace ScalesApp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            Orientation();
 
             //Allows touch interaction
             scaleText.UserInteractionEnabled = true;
@@ -71,9 +73,9 @@ namespace ScalesApp
                 scaleText.Text = _currentScalePool[_positionInCurrentPool].get_key();
                 modeText.Text = _currentScalePool[_positionInCurrentPool].get_mode();
 
-                scaleTextRotated.Text = scaleText.Text;
-                modeTextRotated.Text = modeText.Text;
-                
+                scaleTextRotated.Text = _currentScalePool[_positionInCurrentPool].get_key();
+                modeTextRotated.Text = _currentScalePool[_positionInCurrentPool].get_mode();
+
                 _positionInCurrentPool++;
             }
             else
@@ -81,13 +83,13 @@ namespace ScalesApp
                 SetupScaleShuffle();
             }
 
-            if (!ScalePhoto.Hidden)
-            {
-                ChangeScaleImage();
-            }
+            ChangeScaleImage();
+
         }
         private void ChangeScaleImage()
         {
+            var currentOrientation = UIApplication.SharedApplication.StatusBarOrientation;
+
             if (modeText.Text == "Super-Locrian (Alt)")
             {
                 ScalePhoto.Image = UIImage.FromBundle($"{scaleText.Text}_Super_Locrian");
@@ -95,7 +97,7 @@ namespace ScalesApp
             else
             {
                 ScalePhoto.Image = UIImage.FromBundle($"{scaleText.Text}_{modeText.Text}");
-               
+
             }
             ScalePhotoRotated.Image = ScalePhoto.Image;
         }
@@ -119,7 +121,7 @@ namespace ScalesApp
         private void SetupScaleShuffle()
         {
             //Reset
-            _currentScalePool.Clear(); 
+            _currentScalePool.Clear();
 
             //Position in the random list
             _positionInCurrentPool = 0;
@@ -137,7 +139,7 @@ namespace ScalesApp
 
             //The comprehensive list is then shuffeled
             _currentScalePool = Shuffle(_currentScalePool);
-             
+
             //Random scale selected
             Rnd_ScaleChange();
         }
@@ -160,7 +162,7 @@ namespace ScalesApp
             }
             return temp;
         }
-        
+
         partial void ExpandButton_TouchUpInside(UIButton sender)
         {
             if (ScalePhoto.Hidden)
@@ -171,6 +173,74 @@ namespace ScalesApp
             else
             {
                 ScalePhoto.Hidden = true;
+            }
+        }
+
+        //Code used to adapt controls for different screens
+        nfloat _screenW;
+        nfloat _screenH;
+        private void Orientation()
+        {
+            var currentOrientation = UIApplication.SharedApplication.StatusBarOrientation;
+
+            //Makes sure the correct setup
+            if (currentOrientation == UIInterfaceOrientation.Portrait)
+            {
+                DynamicallyPositionItemsPortrait();
+            }
+            else
+            {
+                DynamicallyPositionItemsLandscape();
+
+            }
+        }
+        private void DynamicallyPositionItemsPortrait()
+        {
+            //--------Portrait-----------
+            //Grabs screen size
+            _screenW = View.Frame.Width;
+            _screenH = View.Frame.Height;
+
+            //Moves text
+            scaleText.Frame = CenterControl(200, 100, 200);
+            modeText.Frame = CenterControl(400, 50, 330);
+
+            //Moves photo
+            ScalePhoto.Frame = CenterControl((_screenW - 10), (_screenW - 10) * (nfloat)0.1134, 450);
+
+            //Moves buttons
+            ExpandButton.Frame = CenterControl(_screenW, 100, _screenH - 100);
+
+        }
+        private void DynamicallyPositionItemsLandscape()
+        {
+            //---------Landscape--------------
+            //Grabs screen size
+            _screenW = View.Frame.Width;
+            _screenH = View.Frame.Height;
+
+            //Moves text
+            scaleTextRotated.Frame = CenterControl(_screenW, 50, 100);
+            modeTextRotated.Frame = CenterControl(_screenW, 50, 150);
+
+            //Moves photo
+            ScalePhotoRotated.Frame = CenterControl((_screenW - 5), (_screenW - 5) * (nfloat)0.1134, _screenH - 120);
+        }
+        private CGRect CenterControl(nfloat w, nfloat h, nfloat startY)
+        {
+            return new CGRect((_screenW / 2) - (w / 2), startY, w, h);
+        }
+        public override void DidRotate(UIInterfaceOrientation fromInterfaceOrientation)
+        {
+            base.DidRotate(fromInterfaceOrientation);
+
+            if (UIInterfaceOrientation.Portrait == fromInterfaceOrientation)
+            {
+                DynamicallyPositionItemsLandscape();
+            }
+            else
+            {
+                DynamicallyPositionItemsPortrait();
             }
         }
     }

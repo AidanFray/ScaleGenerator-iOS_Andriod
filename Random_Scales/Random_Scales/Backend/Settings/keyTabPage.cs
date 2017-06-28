@@ -20,11 +20,14 @@ namespace ScalesApp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
+            
             //Page init has to be here because View in the constructor is different to the view here
             //That is not the case with the other pages
             //Possibly becuase this is the first page?
             Page = new SettingPage(View, this, Settings.keys, "keys");
+            
+            //If the page is entered when Landscape
+            Page.Screen_Rotate(UIApplication.SharedApplication.StatusBarOrientation);
         }
         public override void ViewWillAppear(bool animated)
         {
