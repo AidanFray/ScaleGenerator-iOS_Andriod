@@ -28,9 +28,8 @@ namespace ScalesApp
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-
+            Orientation();
             Settings.LoadSettings();
-
         }
         partial void ScalesButton_TouchUpInside(UIButton sender)
         {
@@ -57,7 +56,6 @@ namespace ScalesApp
             else
             {
                 DynamicallyPositionItemsLandscape();
-
             }
         }
         private void DynamicallyPositionItemsPortrait()

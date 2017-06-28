@@ -12,8 +12,6 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>MinimumOSVersion</key>
-	<string></string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -32,7 +30,32 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>CFBundleIcons</key>
-	<string>AppIcon</string>
+	<key>MinimumOSVersion</key>
+	<string>9.0</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>Icon-App-83.5x83.5@2x.png</string>
+		<string>Icon-App-20x20@2x.png</string>
+		<string>Icon-App-20x20@3x.png</string>
+		<string>Icon-App-29x29@1x.png</string>
+		<string>Icon-App-29x29@2x.png</string>
+		<string>Icon-App-29x29@3x.png</string>
+		<string>Icon-App-40x40@1x.png</string>
+		<string>Icon-App-40x40@2x.png</string>
+		<string>Icon-App-40x40@3x.png</string>
+		<string>Icon-App-57x57@1x.png</string>
+		<string>Icon-App-57x57@2x.png</string>
+		<string>Icon-App-60x60@1x.png</string>
+		<string>Icon-App-60x60@2x.png</string>
+		<string>Icon-App-60x60@3x.png</string>
+		<string>Icon-App-72x72@1x.png</string>
+		<string>Icon-App-72x72@2x.png</string>
+		<string>Icon-App-76x76@1x.png</string>
+		<string>Icon-App-76x76@2x.png</string>
+		<string>Icon-App-76x76@3x.png</string>
+		<string>Icon-App-83.5x83.5@2x.png</string>
+		<string>Icon-Small-50x50@1x.png</string>
+		<string>Icon-Small-50x50@2x.png</string>
+	</array>
 </dict>
 </plist>

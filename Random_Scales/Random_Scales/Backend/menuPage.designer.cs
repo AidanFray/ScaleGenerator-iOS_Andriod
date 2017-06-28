@@ -28,6 +28,10 @@ namespace ScalesApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UINavigationItem menuBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton scalesButton { get; set; }
 
         [Outlet]
@@ -65,6 +69,11 @@ namespace ScalesApp
             if (mainView != null) {
                 mainView.Dispose ();
                 mainView = null;
+            }
+
+            if (menuBar != null) {
+                menuBar.Dispose ();
+                menuBar = null;
             }
 
             if (scalesButton != null) {
