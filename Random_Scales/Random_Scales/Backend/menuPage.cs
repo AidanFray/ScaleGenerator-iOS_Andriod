@@ -11,6 +11,11 @@ namespace ScalesApp
 
         public MainView(IntPtr handle) : base(handle)
         {
+            //Checks if this has been run before
+            if (!Settings.LoadFirstSetupState())
+            {
+                Settings.Initial_Setup();
+            }
         }
 
         public override void ViewDidLoad()

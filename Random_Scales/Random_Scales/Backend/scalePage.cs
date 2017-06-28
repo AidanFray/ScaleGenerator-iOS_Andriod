@@ -160,7 +160,7 @@ namespace ScalesApp
             }
             return temp;
         }
-
+        
         partial void ExpandButton_TouchUpInside(UIButton sender)
         {
             if (ScalePhoto.Hidden)

@@ -32,10 +32,5 @@ namespace ScalesApp
         {
             Settings.ResetAll();
         }
-
-        void OnSizeChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

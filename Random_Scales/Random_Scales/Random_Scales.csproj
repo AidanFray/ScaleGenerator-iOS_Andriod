@@ -2041,9 +2041,9 @@
     <Compile Include="Backend\scalePage.designer.cs">
       <DependentUpon>scalePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\Settings\settingPage.cs" />
-    <Compile Include="Backend\Settings\settingPage.designer.cs">
-      <DependentUpon>settingPage.cs</DependentUpon>
+    <Compile Include="Backend\Settings\settingTabController.cs" />
+    <Compile Include="Backend\Settings\settingTabController.designer.cs">
+      <DependentUpon>settingTabController.cs</DependentUpon>
     </Compile>
     <Compile Include="Backend\Settings\modesTabPage.cs" />
     <Compile Include="Backend\Settings\modesTabPage.designer.cs">

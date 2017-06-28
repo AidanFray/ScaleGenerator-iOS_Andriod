@@ -19,6 +19,29 @@ namespace ScalesApp.Shared
         public static string[] modes = new string[]
         {"Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", "Locrian", "Whole-Tone", "Super-Locrian (Alt)"};
 
+        public static void Initial_Setup()
+        {
+            for (int i = 0; i < keys.Length; i++)
+            {
+                SaveSwitchState(true, "keys", i);
+            }
+            for (int i = 0; i < modes.Length; i++)
+            {
+                SaveSwitchState(true, "modes", i);
+            }
+
+            SaveFirstSetupState(true);
+        }
+
+        public static void SaveFirstSetupState(bool state)
+        {
+            NSUserDefaults.StandardUserDefaults.SetBool(state, $"first_setup");
+        }
+        public static bool LoadFirstSetupState()
+        {
+            return NSUserDefaults.StandardUserDefaults.BoolForKey($"first_setup");
+        }
+
         public static void SaveSwitchState(UISwitch s, string type, int keyNum)
         {
             NSUserDefaults.StandardUserDefaults.SetBool(s.On, $"{type}_{keyNum.ToString()}");

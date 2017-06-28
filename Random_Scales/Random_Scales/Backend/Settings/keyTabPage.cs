@@ -24,7 +24,7 @@ namespace ScalesApp
             //Page init has to be here because View in the constructor is different to the view here
             //That is not the case with the other pages
             //Possibly becuase this is the first page?
-            Page = new SettingPage(View, Settings.keys, "keys");
+            Page = new SettingPage(View, this, Settings.keys, "keys");
         }
         public override void ViewWillAppear(bool animated)
         {
@@ -41,6 +41,18 @@ namespace ScalesApp
             base.WillAnimateRotation(toInterfaceOrientation, duration);
 
             Page.Screen_Rotate(toInterfaceOrientation);
+        }
+
+        public void Display()
+        {
+            //Create Alert
+            var okAlertController = UIAlertController.Create("OK Alert", "This is a sample alert with an OK button.", UIAlertControllerStyle.Alert);
+
+            //Add Action
+            okAlertController.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+
+            // Present Alert
+            PresentViewController(okAlertController, true, null);
         }
     }
 }

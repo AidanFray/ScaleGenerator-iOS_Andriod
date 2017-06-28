@@ -13,16 +13,18 @@ namespace ScalesApp.Shared
     //Generic class used to create a setting page
     public class SettingPage
     {
-        public SettingPage(UIView PageView, string[] MenuItems, string SaveID)
+        public SettingPage(UIView PageView, UIViewController vController, string[] MenuItems, string SaveID)
         {
             _view = PageView;
             _menuItems = MenuItems;
             _savingID = SaveID;
+            _viewController = vController;
         }
 
         public List<UISwitch> PageSwitches = new List<UISwitch>(); //List of switches
 
-        public UIView _view;
+        private UIView _view;
+        private UIViewController _viewController;
         private UIScrollView _scrollView;
         private string[] _menuItems;
         private string _savingID;
@@ -33,9 +35,8 @@ namespace ScalesApp.Shared
 
         public void WhenViewAppears()
         {
-
-
             Create_Controls();
+
             Load_Switches();
         }
         public void WhenViewDisappears()
@@ -50,7 +51,7 @@ namespace ScalesApp.Shared
             {
                 Remove_Controls();
             }
-            
+
             _position = _settingsStartPosition;
 
             PageSwitches.Clear();
@@ -69,9 +70,6 @@ namespace ScalesApp.Shared
             }
             _view.AddSubview(_scrollView);
             _position = _settingsStartPosition;
-
-
-
         }
         private void AddControls(string txt)
         {
@@ -100,6 +98,7 @@ namespace ScalesApp.Shared
             {
                 Frame = new CGRect(_view.Frame.Width - 70, _position + 10, 50, 50)
             };
+            swi.ValueChanged += SwitchToggled;
 
             //Adds controls to relevent locations
             PageSwitches.Add(swi);
@@ -110,6 +109,7 @@ namespace ScalesApp.Shared
             _position += _spacing;
         }
 
+        //Used to load and save the states of the switches
         public void Load_Switches()
         {
             //Loads states
@@ -127,6 +127,7 @@ namespace ScalesApp.Shared
             }
         }
 
+        //Used to remove the scroll view
         public void Remove_Controls()
         {
             foreach (UIView sV in _view.Subviews)
@@ -135,7 +136,7 @@ namespace ScalesApp.Shared
                 {
                     sV.RemoveFromSuperview();
                 }
-                else //HACK: Button I can't find
+                else //HACK: Reset Button I can't find and delete
                 {
                     if (sV is UIButton)
                     {
@@ -143,15 +144,14 @@ namespace ScalesApp.Shared
                         b.Hidden = true;
                     }
                 }
-
-
-
-
             }
         }
 
+        //Event fired when the screen rotates
         public void Screen_Rotate(UIInterfaceOrientation toInterfaceOrientation)
         {
+            Save_Switches();
+
             Remove_Controls();
             if (toInterfaceOrientation == UIInterfaceOrientation.LandscapeLeft ||
                 toInterfaceOrientation == UIInterfaceOrientation.LandscapeLeft)
@@ -163,6 +163,56 @@ namespace ScalesApp.Shared
                 _settingsStartPosition = 60;
             };
             WhenViewAppears();
+        }
+
+        void SwitchToggled(object sender, EventArgs e)
+        {
+            //The calling switch
+            UISwitch _triggeredSwitch = (UISwitch)sender;
+
+            //Keep track of how many 
+            int _onCount = 0;
+
+            //Checks if the last toggle on the page has been triggered
+            foreach (UISwitch _switch in PageSwitches)
+            {
+                if (_switch != _triggeredSwitch)
+                {
+                    //If there're more than on active switches
+                    if (_onCount > 1)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        //If the switch is active
+                        if (_switch.On)
+                        {
+                            _onCount++;
+                        }
+                    }
+                }
+            }
+
+            //If there are no other switches on
+            if (_onCount == 0)
+            {
+                DisplayAlert();
+
+                //Reverts selection
+                _triggeredSwitch.SetState(true, true);
+            }
+        }
+        void DisplayAlert()
+        {
+            //Create Alert
+            var okAlertController = UIAlertController.Create("Error", "You cannot deselect all options", UIAlertControllerStyle.Alert);
+
+            //Add Action
+            okAlertController.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+
+            // Present Alert
+            _viewController.PresentViewController(okAlertController, true, null);
         }
     }
 }
