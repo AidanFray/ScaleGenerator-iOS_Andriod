@@ -1,4 +1,4 @@
-﻿namespace ScalesApp.Shared
+﻿namespace Scales.Core
 {
     public class Scale
     {

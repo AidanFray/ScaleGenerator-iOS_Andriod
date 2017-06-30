@@ -7,6 +7,7 @@ using Foundation;
 using UIKit;
 using CoreGraphics;
 using ScalesApp.Shared;
+using static ScalesApp.Shared.Settings_iOS;
 
 namespace ScalesApp.Shared
 {
@@ -115,7 +116,7 @@ namespace ScalesApp.Shared
             //Loads states
             for (int i = 0; i < PageSwitches.Count; i++)
             {
-                PageSwitches[i] = Settings.LoadSwitchState(PageSwitches[i], _savingID, i);
+                PageSwitches[i].SetState(SettingiOS.Load(_savingID, i), false);
             }
         }
         public void Save_Switches()
@@ -123,7 +124,7 @@ namespace ScalesApp.Shared
             //Saves all the switch states
             for (int i = 0; i < PageSwitches.Count; i++)
             {
-                Settings.SaveSwitchState(PageSwitches[i], _savingID, i);
+                SettingiOS.Save(PageSwitches[i].On, _savingID, i);
             }
         }
 

@@ -2,6 +2,7 @@
 using ScalesApp.Shared;
 using System;
 using UIKit;
+using static ScalesApp.Shared.Settings_iOS;
 
 namespace ScalesApp
 {
@@ -30,7 +31,7 @@ namespace ScalesApp
         //Reset_Button TouchUpInside Handle
         void HandleTouchUpInside(object sender, EventArgs ea)
         {
-            Settings.ResetAll();
+            SettingiOS.ResetAll();
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using UIKit;
 using ScalesApp.Shared;
 using CoreGraphics;
+using static ScalesApp.Shared.Settings_iOS;
 
 namespace ScalesApp
 {
@@ -13,9 +14,9 @@ namespace ScalesApp
         public MainView(IntPtr handle) : base(handle)
         {
             //Checks if this has been run before
-            if (!Settings.LoadFirstSetupState())
+            if (!SettingiOS.LoadFirstSetupState())
             {
-                Settings.Initial_Setup();
+                SettingiOS.Initial_Setup();
             }
         }
 
@@ -29,7 +30,7 @@ namespace ScalesApp
         {
             base.ViewDidAppear(animated);
             Orientation();
-            Settings.LoadSettings();
+            SettingiOS.LoadSettings();
         }
         partial void ScalesButton_TouchUpInside(UIButton sender)
         {

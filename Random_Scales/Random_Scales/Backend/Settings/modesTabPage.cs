@@ -19,7 +19,7 @@ namespace ScalesApp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            Page = new SettingPage(View, this, Settings.modes, "modes");
+            Page = new SettingPage(View, this, Settings_iOS.modes, "modes");
         }
         public override void ViewWillAppear(bool animated)
         {

@@ -85,6 +85,9 @@
     <MtouchProfiling>true</MtouchProfiling>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Scales.Core">
+      <HintPath>..\Scales.Core\bin\Debug\Scales.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -2052,9 +2055,8 @@
     <Compile Include="Backend\Settings\modesTabPage.designer.cs">
       <DependentUpon>modesTabPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shared\Scales.cs" />
     <Compile Include="Shared\SettingPage.cs" />
-    <Compile Include="Shared\Settings.cs" />
+    <Compile Include="Shared\Settings_iOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\AppIconNoBackground.png" />
