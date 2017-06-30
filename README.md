@@ -1,4 +1,4 @@
-![alt text](https://ibb.co/keXx3Q)
+![alt text](https://i.imgur.com/x9GMXdQ.png)
 # Scale Generator
 An application that is designed to randomly provide scales for practising musicians.
 
