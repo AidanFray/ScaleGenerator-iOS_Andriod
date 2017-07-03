@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="theme_devicedefault_light_noactionbar_background">#ffe57373</color><color name="theme_devicedefault_light_dialogwhenlarge_noactionbar_background">#ffffcdd2</color><color name="theme_devicedefault_background">#ffef9a9a</color>
+  <style name="Theme.Custom3" parent="@android:style/Theme.DeviceDefault">
+    <item name="android:colorBackground">@color/theme_devicedefault_background</item>
+    <item name="android:windowBackground">?android:attr/colorBackground</item>
+  <item name="android:colorPrimary">#ffef9a9a</item><item name="android:textColorPrimary">#ffd50000</item><item name="android:textColorSecondary">#ffd50000</item></style>
+<style name="Theme.Custom" parent="@android:style/Theme.DeviceDefault"><item name="android:colorBackground">@color/theme_devicedefault_light_noactionbar_background</item><item name="android:windowBackground">?android:attr/colorBackground</item><item name="android:colorPrimary">#ffe53935</item></style></resources>

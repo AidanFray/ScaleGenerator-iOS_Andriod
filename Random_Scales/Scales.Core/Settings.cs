@@ -17,11 +17,11 @@ namespace Scales.Core
         //Hardcoded list of keys and modes and a list for both that contains a 1:1 comparative method to see what are active
         //The boolean is loaded from file from the respective platforms Settings_[OS].cs file
         public List<bool> activeKeys = new List<bool>();
-        public string[] keys = new string[]
+        public static string[] keys = new string[]
         {"C", "C#", "Db", "D", "D#", "Eb", "E", "F", "F#", "Gb", "G", "G#", "Ab", "A", "A#", "Bb", "B"};
 
         public List<bool> activeModes = new List<bool>();
-        public string[] modes = new string[]
+        public static string[] modes = new string[]
         {"Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", "Locrian", "Whole-Tone", "Super-Locrian (Alt)"};
 
         private List<string> _keyPool = new List<string>();

@@ -41,11 +41,30 @@ namespace Random_Scales_Andriod
 			}
 		}
 		
+		public partial class Dimension
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int menu_textSize = 2130968576;
+			
+			static Dimension()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Dimension()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int AppIconNoBackground = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Icon = 2130837505;
 			
 			static Drawable()
 			{
@@ -60,11 +79,17 @@ namespace Random_Scales_Andriod
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int listView1 = 2131034113;
+			// aapt resource value: 0x7f060002
+			public const int Scale_Button = 2131099650;
 			
-			// aapt resource value: 0x7f050000
-			public const int txtView = 2131034112;
+			// aapt resource value: 0x7f060003
+			public const int Setting_Button = 2131099651;
+			
+			// aapt resource value: 0x7f060001
+			public const int imageView1 = 2131099649;
+			
+			// aapt resource value: 0x7f060000
+			public const int linearLayout1 = 2131099648;
 			
 			static Id()
 			{
@@ -80,10 +105,7 @@ namespace Random_Scales_Andriod
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int listView_Row = 2130903040;
-			
-			// aapt resource value: 0x7f030001
-			public const int Main = 2130903041;
+			public const int Main = 2130903040;
 			
 			static Layout()
 			{
@@ -98,11 +120,11 @@ namespace Random_Scales_Andriod
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int ApplicationName = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int Hello = 2131034112;
 			
 			static String()
 			{

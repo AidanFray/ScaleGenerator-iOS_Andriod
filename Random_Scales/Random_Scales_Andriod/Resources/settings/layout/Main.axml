@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     p1:orientation="vertical"
     p1:layout_width="match_parent"
     p1:layout_height="match_parent"
     p1:id="@+id/linearLayout1"
+    p1:background="@android:color/background_light"
     p1:weightSum="100"
     p1:minWidth="25px"
-    p1:minHeight="25px"
-    p1:background="#ffc2c2">
+    p1:minHeight="25px">
     <ImageView
-        p1:src="@drawable/appiconnobackground"
+        p1:src="@drawable/icon"
         p1:layout_width="match_parent"
         p1:layout_height="0dp"
         p1:layout_weight="40"
         p1:id="@+id/imageView1"
-        p1:layout_marginBottom="0.0dp"
-        p1:layout_marginTop="22.0dp" />
+        p1:layout_marginBottom="0.0dp" />
     <Button
         p1:text="Scales"
         p1:layout_width="match_parent"
         p1:layout_height="0dp"
-        p1:id="@+id/Scale_Button"
+        p1:id="@+id/button1"
         p1:layout_weight="20"
         p1:layout_marginLeft="20px"
         p1:layout_marginRight="20px"
-        p1:textSize="@dimen/menu_textSize"
+        p1:textSize="20sp"
         p1:layout_marginTop="0.0dp"
-        p1:textColor="#000000"
-        p1:background="#ffc2c2" />
+        p1:background="@android:color/background_light"
+        p1:textColor="#000000" />
     <Button
         p1:text="Settings"
         p1:layout_width="match_parent"
         p1:layout_height="0dp"
-        p1:id="@+id/Setting_Button"
+        p1:id="@+id/button2"
         p1:layout_weight="20"
         p1:layout_marginLeft="20px"
         p1:layout_marginRight="20px"
-        p1:textSize="@dimen/menu_textSize"
+        p1:textSize="20sp"
         p1:layout_marginTop="0.0dp"
-        p1:background="#ffc2c2"
+        p1:background="@android:color/background_light"
         p1:textColor="#000000" />
 </LinearLayout>
