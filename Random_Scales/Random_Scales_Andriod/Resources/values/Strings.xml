@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">Scales Generator</string>
+  <string name="ApplicationName">Scales Generator</string>
+  <string name="ScaleButton">Scales</string>
+  <string name="SettingButton">Settings</string>
+  <string name="background_HEX">#ffc2c2</string>
+  <string name="key">C#</string>
+  <string name="mode">Dorian</string>
 </resources>

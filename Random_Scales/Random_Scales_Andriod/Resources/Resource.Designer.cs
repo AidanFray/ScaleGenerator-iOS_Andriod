@@ -79,6 +79,9 @@ namespace Random_Scales_Andriod
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060004
+			public const int ScaleText = 2131099652;
+			
 			// aapt resource value: 0x7f060002
 			public const int Scale_Button = 2131099650;
 			
@@ -107,6 +110,12 @@ namespace Random_Scales_Andriod
 			// aapt resource value: 0x7f030000
 			public const int Main = 2130903040;
 			
+			// aapt resource value: 0x7f030001
+			public const int Scale = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int Settings = 2130903042;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -120,11 +129,23 @@ namespace Random_Scales_Andriod
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int ApplicationName = 2131034113;
-			
 			// aapt resource value: 0x7f050000
-			public const int Hello = 2131034112;
+			public const int ApplicationName = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int ScaleButton = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int SettingButton = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int background_HEX = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int key = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int mode = 2131034117;
 			
 			static String()
 			{

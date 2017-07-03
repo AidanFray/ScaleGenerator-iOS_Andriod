@@ -17,28 +17,32 @@
         p1:id="@+id/imageView1"
         p1:layout_marginBottom="0.0dp"
         p1:layout_marginTop="22.0dp" />
-    <Button
-        p1:text="Scales"
+    <TextView
+        p1:text="@string/ScaleButton"
         p1:layout_width="match_parent"
         p1:layout_height="0dp"
         p1:id="@+id/Scale_Button"
-        p1:layout_weight="20"
+        p1:layout_weight="25"
         p1:layout_marginLeft="20px"
         p1:layout_marginRight="20px"
         p1:textSize="@dimen/menu_textSize"
-        p1:layout_marginTop="0.0dp"
+        p1:layout_marginTop="10.0dp"
+        p1:background="#ffc2c2"
         p1:textColor="#000000"
-        p1:background="#ffc2c2" />
-    <Button
-        p1:text="Settings"
+        p1:gravity="center"
+        p1:clickable="true" />
+    <TextView
+        p1:text="@string/SettingButton"
         p1:layout_width="match_parent"
         p1:layout_height="0dp"
         p1:id="@+id/Setting_Button"
-        p1:layout_weight="20"
+        p1:layout_weight="25"
         p1:layout_marginLeft="20px"
         p1:layout_marginRight="20px"
         p1:textSize="@dimen/menu_textSize"
-        p1:layout_marginTop="0.0dp"
+        p1:layout_marginTop="10.0dp"
         p1:background="#ffc2c2"
-        p1:textColor="#000000" />
+        p1:textColor="#000000"
+        p1:gravity="center"
+        p1:clickable="true" />
 </LinearLayout>
