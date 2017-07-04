@@ -16,6 +16,7 @@ namespace ScalesApp.Shared
     {
         public static Settings_iOS SettingiOS = new Settings_iOS();
 
+        //Overided saving and loading
         public override void Save(bool state, string type, int keyNum)
         {
             NSUserDefaults.StandardUserDefaults.SetBool(state, $"{type}_{keyNum.ToString()}");

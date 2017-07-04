@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using static Random_Scales_Andriod.Resources.settings.Settings_Android;
 
 namespace Random_Scales_Andriod
 {
@@ -20,6 +21,9 @@ namespace Random_Scales_Andriod
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Settings);
             Page.Set_ActionBar(ActionBar);
+            
         }
+
+        
     }
 }

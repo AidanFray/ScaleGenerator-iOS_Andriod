@@ -52,7 +52,7 @@ namespace ScalesApp
                 modeTextRotated.Text = SettingiOS.NextMode();
 
                 //Moves along to the next index
-                SettingiOS.increment_positionInCurrentPool();
+                SettingiOS.movePositionForward();
             }
             else
             {
@@ -61,8 +61,9 @@ namespace ScalesApp
 
             //Updates the scale image
             ChangeScaleImage();
-
         }
+
+        //TODO: General Method?
         private void ChangeScaleImage()
         {
             var currentOrientation = UIApplication.SharedApplication.StatusBarOrientation;

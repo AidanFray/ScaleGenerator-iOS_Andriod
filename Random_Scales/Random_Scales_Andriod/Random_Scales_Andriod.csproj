@@ -47,7 +47,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="Scales.Core">
+    <Reference Include="Scales.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Scales.Core\bin\Debug\Scales.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />

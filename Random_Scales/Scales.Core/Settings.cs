@@ -41,41 +41,22 @@ namespace Scales.Core
             SaveFirstSetupState(true);
         }
 
-        //This method compares the two lists and adds the strings of the active lists
-        public void ApplySettings()
-        {
-            _keyPool.Clear();
-            for (int i = 0; i < activeKeys.Count; i++)
-            {
-                if (activeKeys[i])
-                {
-                    //Adds scales to the pool
-                    _keyPool[i] = keys[i];
-                }
-            }
-
-            _modePool.Clear();
-            for (int i = 0; i < activeModes.Count; i++)
-            {
-                if (activeModes[i])
-                {
-                    //Adds scales to the pool
-                    _modePool[i] = modes[i];
-                }
-            }
-        }
-
+        //TODO: Property me!
         //Keeps track of where the program is in the randmoised list
         private int _positionInCurrentPool;
-        public int get_positionInCurrentPool()
+        public int PositioWnInCurrentPool
         {
-            return _positionInCurrentPool;
+            get
+            {
+                return _positionInCurrentPool;
+            }
+            set
+            {
+                //Used to increment or deincrement
+                _positionInCurrentPool += value;
+            }
         }
-        public void increment_positionInCurrentPool()
-        {
-            _positionInCurrentPool++;
-        }
-
+        
         //Used to shuffle and check if the list needs shuffling
         public void SetupScaleShuffle()
         {
@@ -161,6 +142,7 @@ namespace Scales.Core
             {
                 activeModes.Add(Load("modes", i));
             }
+
         }
         //Resets all the settings
         public void ResetAll()
@@ -178,6 +160,32 @@ namespace Scales.Core
             //TODO: Reload needed here?
         }
 
+        //This method compares the two lists and adds the strings of the active lists
+        public void ApplySettings()
+        {
+            _keyPool.Clear();
+            for (int i = 0; i < activeKeys.Count; i++)
+            {
+                if (activeKeys[i])
+                {
+                    //Adds scales to the pool
+                    _keyPool.Add(keys[i]);
+                }
+            }
+
+            //TODO: Exception being thrown here????
+
+            _modePool.Clear();
+            for (int i = 0; i < activeModes.Count; i++)
+            {
+                if (activeModes[i])
+                {
+                    //Adds scales to the pool
+                    _modePool.Add(modes[i]);
+                }
+            }
+        }
+
         //Used to check if an intitial setup has been completed
         public void SaveFirstSetupState(bool state)
         {
@@ -191,8 +199,8 @@ namespace Scales.Core
         //----------------------------------------OVERRIDABLE BEHAVOIUR----------------------------------------------//
         //Loads the state of each setting
         public virtual void Save(bool state, string type, int keyNum) { }
-        public virtual void Save(bool state, string filename)   { }
-        public virtual bool Load(string type, int keyNum) { return false;}
+        public virtual void Save(bool state, string filename) { }
+        public virtual bool Load(string type, int keyNum) { return false; }
         public virtual bool Load(string filename) { return false; }
         //------------------------------------------------------------------------------------------------------------//
     }

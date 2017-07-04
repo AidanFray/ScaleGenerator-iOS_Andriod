@@ -6,6 +6,7 @@ using Android.Content;
 using Random_Scales_Andriod.Activities;
 using Android.Graphics.Drawables;
 using Android.Graphics;
+using static Random_Scales_Andriod.Resources.settings.Settings_Android;
 
 namespace Random_Scales_Andriod
 {
@@ -19,8 +20,13 @@ namespace Random_Scales_Andriod
             Page.Set_ActionBar(ActionBar);
             
             Create_ButtonLinks();
-        }
+            
+            //Setting saving
+            SettingAndroid.Assign_Pref(this);
+            SettingAndroid.Initial_Setup();
 
+            SettingAndroid.LoadSettings();
+        }
 
         //Buttons
         private void Create_ButtonLinks()
