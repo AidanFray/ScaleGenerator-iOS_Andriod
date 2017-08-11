@@ -21,7 +21,7 @@ namespace Random_Scales_Andriod
             
             Create_ButtonLinks();
             
-            //Setting saving
+            // Setting saving
             SettingAndroid.Assign_Pref(this);
             SettingAndroid.Initial_Setup();
 

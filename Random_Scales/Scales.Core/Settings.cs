@@ -44,7 +44,7 @@ namespace Scales.Core
         //TODO: Property me!
         //Keeps track of where the program is in the randmoised list
         private int _positionInCurrentPool;
-        public int PositioWnInCurrentPool
+        public int PositionInCurrentPool
         {
             get
             {
@@ -52,8 +52,18 @@ namespace Scales.Core
             }
             set
             {
-                //Used to increment or deincrement
-                _positionInCurrentPool += value;
+                //Checks to see if a deincrement
+                if (value != -1)
+                {
+                    _positionInCurrentPool += value;
+                }
+                //Only deincrements if possible
+                else if (_positionInCurrentPool > 0)
+                {
+                    _positionInCurrentPool += value;
+                }
+                
+                
             }
         }
         
@@ -119,11 +129,11 @@ namespace Scales.Core
         //Reads of next key/mode from the generated list
         public string NextKey()
         {
-            return _currentScalePool[_positionInCurrentPool].get_key();
+            return _currentScalePool[_positionInCurrentPool].Key;
         }
         public string NextMode()
         {
-            return _currentScalePool[_positionInCurrentPool].get_mode();
+            return _currentScalePool[_positionInCurrentPool].Mode;
         }
 
         //Method used to remove/add keys and modes to their active lists

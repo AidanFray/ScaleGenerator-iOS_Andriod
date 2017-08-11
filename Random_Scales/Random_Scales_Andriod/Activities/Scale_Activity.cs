@@ -79,15 +79,15 @@ namespace Random_Scales_Andriod.Activities
             {
                 if (Position == TouchPositon.Right)
                 {
-                    SettingAndroid.movePositionForward();
+                    //Adds 1 onto the pool value
+                    SettingAndroid.PositionInCurrentPool = 1;
                     Get_Scale();
                 }
                 else
                 {
-                    SettingAndroid.movePositionBack();
+                    //Takes 1 away from the pool value
+                    SettingAndroid.PositionInCurrentPool = -1;
                     Get_Scale();
-
-                    SettingAndroid.hello = 1;
                 }
             }
             else

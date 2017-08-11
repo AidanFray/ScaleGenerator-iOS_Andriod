@@ -52,7 +52,7 @@ namespace ScalesApp
                 modeTextRotated.Text = SettingiOS.NextMode();
 
                 //Moves along to the next index
-                SettingiOS.movePositionForward();
+                SettingiOS.PositionInCurrentPool = 1;
             }
             else
             {

@@ -9,15 +9,15 @@
         }
 
         private string _key;
-        private string _mode;
-
-        public string get_key()
+        public string Key
         {
-            return _key;
+            get { return _key; }
         }
-        public string get_mode()
+
+        private string _mode;
+        public string Mode
         {
-            return _mode;
+            get { return _mode; }
         }
     }
 }

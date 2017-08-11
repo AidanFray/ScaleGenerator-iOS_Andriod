@@ -141,8 +141,7 @@ namespace ScalesApp.Shared
                 {
                     if (sV is UIButton)
                     {
-                        UIButton b = (UIButton)sV;
-                        b.Hidden = true;
+                        sV.Hidden = true;
                     }
                 }
             }

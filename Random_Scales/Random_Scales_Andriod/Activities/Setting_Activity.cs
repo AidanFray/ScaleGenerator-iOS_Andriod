@@ -9,21 +9,26 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using static Random_Scales_Andriod.Resources.settings.Settings_Android;
+
+using Random_Scales_Andriod.Resources.preferences;
+using Android.Preferences;
 
 namespace Random_Scales_Andriod
 {
-    [Activity(Label = "@string/SettingButton")]
-    public class Setting_Activity : Activity
+    [Activity(Label = "@string/SettingButton", Theme ="@style/Theme")]
+    public class Setting_Activity : PreferenceActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.Settings);
-            Page.Set_ActionBar(ActionBar);
             
-        }
+            //TODO: Method me
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            SettingFragment setting = new SettingFragment();
+            transaction.Replace(Android.Resource.Id.Content, setting);
+            transaction.Commit();
 
-        
+            //Page.Set_ActionBar(ActionBar);
+        }
     }
 }
