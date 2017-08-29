@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//TODO: Add random order code here?
+//TODO: Add random scale order code
 namespace Scales.Core
 {
     public class Settings
@@ -41,7 +41,6 @@ namespace Scales.Core
             SaveFirstSetupState(true);
         }
 
-        //TODO: Property me!
         //Keeps track of where the program is in the randmoised list
         private int _positionInCurrentPool;
         public int PositionInCurrentPool
@@ -154,6 +153,7 @@ namespace Scales.Core
             }
 
         }
+
         //Resets all the settings
         public void ResetAll()
         {
@@ -166,8 +166,6 @@ namespace Scales.Core
             {
                 activeModes[i] = true;
             }
-
-            //TODO: Reload needed here?
         }
 
         //This method compares the two lists and adds the strings of the active lists
@@ -182,8 +180,6 @@ namespace Scales.Core
                     _keyPool.Add(keys[i]);
                 }
             }
-
-            //TODO: Exception being thrown here????
 
             _modePool.Clear();
             for (int i = 0; i < activeModes.Count; i++)

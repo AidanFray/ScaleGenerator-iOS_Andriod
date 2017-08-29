@@ -33,6 +33,7 @@ namespace ScalesApp.Shared
         private int _position;
         private int _spacing = 50;
         private bool _alternate = false;
+        private static UIColor Background = UIColor.FromRGB(252, 237, 237);
 
         public void WhenViewAppears()
         {
@@ -78,15 +79,14 @@ namespace ScalesApp.Shared
             UILabel label = new UILabel()
             {
                 Text = txt,
-                Frame = new CoreGraphics.CGRect(5, _position, _view.Frame.Width, _spacing),
+                Frame = new CGRect(5, _position, _view.Frame.Width, _spacing),
                 Hidden = false
             };
 
             //Alternates colour for background
             if (_alternate)
             {
-                //TODO: Turn colour into var
-                label.BackgroundColor = UIColor.FromRGB(252, 237, 237);
+                label.BackgroundColor = Background;
             }
             else
             {

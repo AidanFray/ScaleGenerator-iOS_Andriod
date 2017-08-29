@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using static Random_Scales_Andriod.Resources.settings.Settings_Android;
@@ -15,6 +9,7 @@ namespace Random_Scales_Andriod.Activities
     [Activity(Label = "@string/ScaleButton")]
     public class Scale_Activity : Activity
     {
+        //Used to signify what side of the screen has been touched
         TouchPositon Position = new TouchPositon();
         enum TouchPositon
         {
@@ -39,7 +34,6 @@ namespace Random_Scales_Andriod.Activities
             SettingAndroid.SetupScaleShuffle();
         }
 
-        //TODO: Need to check when touch is finished
         private void Add_TouchEvent()
         {
             TextView text = FindViewById<TextView>(Resource.Id.ScaleText);
@@ -53,7 +47,8 @@ namespace Random_Scales_Andriod.Activities
             {
                 //When the touch ends
                 case MotionEventActions.Up:
-                    //Gets touch location
+
+                    //Gets touch location, the x is only needed because it landscape sides of the screen
                     float x = e.Event.GetX();
 
                     //Grabs width and hight of the screen
@@ -65,6 +60,7 @@ namespace Random_Scales_Andriod.Activities
                     if (x < midX) { Position = TouchPositon.Left; }
                     else { Position = TouchPositon.Right; }
 
+                    //Issues a sacle change
                     Rnd_ScaleChange();
                     break;
                 default:
@@ -90,14 +86,16 @@ namespace Random_Scales_Andriod.Activities
                     Get_Scale();
                 }
             }
+            //If first time setup is needed
             else
             {
                 SettingAndroid.SetupScaleShuffle();
             }
         }
-
+        
         private void Get_Scale()
         {
+            //Grabs the next scale from the settings page
             string prevS = ScaleText.Text;
             string s = $"{SettingAndroid.NextKey()}\n{SettingAndroid.NextMode()}";
 

@@ -21,14 +21,17 @@ namespace Random_Scales_Andriod
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            
-            //TODO: Method me
+            Setup();
+        }
+
+        private void Setup()
+        {
             FragmentTransaction transaction = FragmentManager.BeginTransaction();
             SettingFragment setting = new SettingFragment();
             transaction.Replace(Android.Resource.Id.Content, setting);
             transaction.Commit();
-
-            //Page.Set_ActionBar(ActionBar);
         }
+
+
     }
 }
