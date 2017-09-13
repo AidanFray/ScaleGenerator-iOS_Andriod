@@ -71,18 +71,31 @@ namespace Random_Scales_Andriod.Resources.preferences
                 Modes.Add(checkBox);
             }
         }
-
+        
         //Will run when the page
         public override void OnDestroy()
         {
             base.OnDestroy();
+            
+            if (CheckIfAnySelected(Keys) && CheckIfAnySelected(Modes))
+            {
+                //Saves the states of the checkboxes
+                SaveSwitches(Keys, "keys");
+                SaveSwitches(Modes, "modes");
 
-            //Saves the states of the checkboxes
-            SaveSwitches(Keys, "keys");
-            SaveSwitches(Modes, "modes");
-    
-            //Updates the active pools
-            Settings_Android.SettingAndroid.LoadSettings();
+                //Updates the active pools
+                Settings_Android.SettingAndroid.LoadSettings();
+            }
+            else
+            {
+                //Shows the error
+                Toast toast = Toast.MakeText(Application.Context, "Error: Please select more options", ToastLength.Short);
+                toast.Show();
+
+                //Moves back to the setting page
+                var intent = new Intent(Application.Context, typeof(Setting_Activity));
+                StartActivity(intent);
+            }
         }
 
         private void SaveSwitches(List<CheckBoxPreference> list, string type)
@@ -95,5 +108,16 @@ namespace Random_Scales_Andriod.Resources.preferences
             }
         }
 
+        private bool CheckIfAnySelected(List<CheckBoxPreference> list)
+        {
+            foreach (CheckBoxPreference c in list)
+            {
+                if (c.Checked)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
