@@ -13,20 +13,27 @@ namespace Random_Scales_Andriod.Resources.settings
         {
             _prefs = PreferenceManager.GetDefaultSharedPreferences(context);
             _editor = _prefs.Edit();
+            _editor.Commit();
         }
         private static ISharedPreferences _prefs { get; set; }
         private static ISharedPreferencesEditor _editor { get; set; }
         
+        //Method needed to commit the saving of preferences
+        public void CommitChanges()
+        {
+            _editor.Commit();
+        }
+
         //Overided saving a loading
         public override void Save(bool state, string filename)
         {
             _editor.PutBoolean(filename, state);
-            _editor.Apply();
+            CommitChanges();
         }
         public override void Save(bool state, string type, int keyNum)
         {
             _editor.PutBoolean($"{type}_{keyNum.ToString()}", state);
-            _editor.Apply();
+            CommitChanges();
         }
         public override bool Load(string filename)
         {

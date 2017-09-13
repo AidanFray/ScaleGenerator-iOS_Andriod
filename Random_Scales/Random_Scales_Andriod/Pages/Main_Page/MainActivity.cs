@@ -23,11 +23,13 @@ namespace Random_Scales_Andriod
             
             // Setting saving
             SettingAndroid.Assign_Pref(this);
-            SettingAndroid.Initial_Setup();
+
+            //TODO: This needs to be a first loads?
+            //SettingAndroid.Initial_Setup();
 
             SettingAndroid.LoadSettings();
         }
-
+        
         //Buttons
         private void Create_ButtonLinks()
         {
@@ -39,6 +41,8 @@ namespace Random_Scales_Andriod
             TextView settingButton = FindViewById<TextView>(Resource.Id.Setting_Button);
             settingButton.Click += SettingButton_Click;
         }
+
+        //Moves the program to another location
         private void SettingButton_Click(object sender, System.EventArgs e)
         {
             var intent = new Intent(this, typeof(Setting_Activity));

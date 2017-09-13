@@ -2028,8 +2028,8 @@
     <Compile Include="Controllers\DataViewController.designer.cs">
       <DependentUpon>DataViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\Settings\keyTabPage.cs" />
-    <Compile Include="Backend\Settings\keyTabPage.designer.cs">
+    <Compile Include="Backend\keyTabPage.cs" />
+    <Compile Include="Backend\keyTabPage.designer.cs">
       <DependentUpon>keyTabPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs" />
@@ -2051,12 +2051,12 @@
     <Compile Include="Backend\Settings\settingTabController.designer.cs">
       <DependentUpon>settingTabController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Backend\Settings\modesTabPage.cs" />
-    <Compile Include="Backend\Settings\modesTabPage.designer.cs">
+    <Compile Include="Backend\modesTabPage.cs" />
+    <Compile Include="Backend\modesTabPage.designer.cs">
       <DependentUpon>modesTabPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Shared\SettingPage.cs" />
-    <Compile Include="Shared\Settings_iOS.cs" />
+    <Compile Include="Backend\settingsPage.cs" />
+    <Compile Include="Backend\Settings\Settings_iOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\AppIconNoBackground.png" />

@@ -75,6 +75,10 @@ namespace Scales.Core
             //Position in the random list
             _positionInCurrentPool = 0;
 
+            //TODO: this working?
+            //Resets the random value
+            _random = new Random();
+
             //This creates a comprehenisive list of all the scale combinations
             foreach (string key in _keyPool)
             {
@@ -84,7 +88,7 @@ namespace Scales.Core
                     _currentScalePool.Add(newScale);
                 }
             }
-
+            
             //The comprehensive list is then shuffeled
             _currentScalePool = Shuffle(_currentScalePool);
         }

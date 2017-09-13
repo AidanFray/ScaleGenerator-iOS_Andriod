@@ -4,6 +4,6 @@
   <string name="ScaleButton">Scales</string>
   <string name="SettingButton">Settings</string>
   <string name="background_HEX">#ffc2c2</string>
-  <string name="key">C#</string>
-  <string name="mode">Dorian</string>
+  <string name="key">Not enough</string>
+  <string name="mode">Values selected</string>
 </resources>

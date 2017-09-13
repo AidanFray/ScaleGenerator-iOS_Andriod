@@ -24,21 +24,28 @@ namespace Random_Scales_Andriod.Activities
             SetContentView(Resource.Layout.Scale);
             Page.Set_ActionBar(ActionBar);
 
-            // Create your application here
+            //Creates text
             ScaleText = FindViewById<TextView>(Resource.Id.ScaleText);
 
-
+            //Creates left and right touch events
             Add_TouchEvent();
+        }
+
+        //Runs when the view appears
+        protected override void OnResume()
+        {
+            base.OnResume();
 
             SettingAndroid.ApplySettings();
             SettingAndroid.SetupScaleShuffle();
+
+            Rnd_ScaleChange();
         }
 
         private void Add_TouchEvent()
         {
             TextView text = FindViewById<TextView>(Resource.Id.ScaleText);
             text.Touch += Text_Touch;
-
         }
 
         private void Text_Touch(object sender, View.TouchEventArgs e)
@@ -70,29 +77,33 @@ namespace Random_Scales_Andriod.Activities
 
         private void Rnd_ScaleChange()
         {
+            //Direction
+            if (Position == TouchPositon.Right)
+            {
+                //Adds 1 onto the pool value
+                SettingAndroid.PositionInCurrentPool = 1;
+
+            }
+            else
+            {
+                //Takes 1 away from the pool value
+                SettingAndroid.PositionInCurrentPool = -1;
+                Get_Scale();
+            }
+
             //Checks if the pools need a refresh
             if (!SettingAndroid.PoolEmpty())
             {
-                if (Position == TouchPositon.Right)
-                {
-                    //Adds 1 onto the pool value
-                    SettingAndroid.PositionInCurrentPool = 1;
-                    Get_Scale();
-                }
-                else
-                {
-                    //Takes 1 away from the pool value
-                    SettingAndroid.PositionInCurrentPool = -1;
-                    Get_Scale();
-                }
+                Get_Scale();
             }
             //If first time setup is needed
             else
             {
                 SettingAndroid.SetupScaleShuffle();
+                Get_Scale();
             }
         }
-        
+
         private void Get_Scale()
         {
             //Grabs the next scale from the settings page

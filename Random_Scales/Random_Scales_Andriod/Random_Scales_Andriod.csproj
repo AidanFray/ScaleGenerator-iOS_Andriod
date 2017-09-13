@@ -69,13 +69,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activities\MainActivity.cs" />
-    <Compile Include="Activities\Scale_Activity.cs" />
+    <Compile Include="Pages\Main_Page\MainActivity.cs" />
+    <Compile Include="Pages\Scale_Page\Scale_Activity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\settings\SettingFragment.cs" />
-    <Compile Include="Resources\settings\Setting_Android.cs" />
-    <Compile Include="Activities\Setting_Activity.cs" />
+    <Compile Include="Pages\Settings_Page\Settings_Backend\SettingFragment.cs" />
+    <Compile Include="Pages\Settings_Page\Settings_Backend\Setting_Android.cs" />
+    <Compile Include="Pages\Settings_Page\Setting_Activity.cs" />
     <Compile Include="Shared_Pages.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -84,7 +84,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Strings.xml">
+    <AndroidResource Include="Resources\values\strings.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -99,6 +99,7 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AppIcons\" />
     <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
