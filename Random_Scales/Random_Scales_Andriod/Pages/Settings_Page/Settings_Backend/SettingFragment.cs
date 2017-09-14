@@ -39,6 +39,7 @@ namespace Random_Scales_Andriod.Resources.preferences
             {
                 Title = "Keys"
             };
+            
             PreferenceScreen.AddPreference(Keys_Category);
             foreach (string key in Scales.Core.Settings.keys)
             {
@@ -47,6 +48,9 @@ namespace Random_Scales_Andriod.Resources.preferences
                     Title = key,
                     Key = key
                 };
+                
+                checkBox.SetDefaultValue(true);
+
                 PreferenceScreen.AddPreference(checkBox);
                 Keys.Add(checkBox);
             }
@@ -67,6 +71,9 @@ namespace Random_Scales_Andriod.Resources.preferences
                     Title = mode,
                     Key = mode
                 };
+                
+                checkBox.SetDefaultValue(true);
+
                 PreferenceScreen.AddPreference(checkBox);
                 Modes.Add(checkBox);
             }

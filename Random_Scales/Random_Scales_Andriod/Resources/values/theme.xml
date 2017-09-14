@@ -8,14 +8,18 @@
     <item name="android:colorPrimary">@color/primary</item>
     <!--Changes the background color, windowBackground cannor use a literal colour value and has to reference one-->
     <item name="android:windowBackground">@color/background</item>
+
     <!--All text-->
     <item name="android:textColorPrimary">#000000</item>
+    <!-- Above changed! -->
+
     <!--?Body text color-->
-    <item name="android:textColorSecondary">#000000</item>
+    <item name="android:textColorSecondary">#ffc2c2</item>
     <item name="android:colorPrimaryDark">@color/primary</item>
-    <item name="android:colorAccent">#ffc2c2</item>
-    
+    <item name="android:colorAccent">#9a0000</item>
+
     <item name="android:divider">#000000</item>
+    <item name="android:dividerHeight">10dp</item>
 
   </style>
 </resources>
