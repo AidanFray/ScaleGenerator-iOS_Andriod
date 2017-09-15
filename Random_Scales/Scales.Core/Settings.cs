@@ -30,15 +30,20 @@ namespace Scales.Core
         //Setup
         public void Initial_Setup()
         {
-            for (int i = 0; i < keys.Length; i++)
+            if (!LoadFirstSetupState()) //Stops this from ever running again
             {
-                Save(true, "keys", i);
+                //Sets all the values to true
+                for (int i = 0; i < keys.Length; i++)
+                {
+                    Save(true, "keys", i);
+                }
+                for (int i = 0; i < modes.Length; i++)
+                {
+                    Save(true, "modes", i);
+                }
+
+                SaveFirstSetupState(true); //Saves a boolean to say setup as been complete
             }
-            for (int i = 0; i < modes.Length; i++)
-            {
-                Save(true, "modes", i);
-            }
-            SaveFirstSetupState(true);
         }
 
         //Keeps track of where the program is in the randmoised list
@@ -61,11 +66,11 @@ namespace Scales.Core
                 {
                     _positionInCurrentPool += value;
                 }
-                
-                
+
+
             }
         }
-        
+
         //Used to shuffle and check if the list needs shuffling
         public void SetupScaleShuffle()
         {
@@ -88,7 +93,7 @@ namespace Scales.Core
                     _currentScalePool.Add(newScale);
                 }
             }
-            
+
             //The comprehensive list is then shuffeled
             _currentScalePool = Shuffle(_currentScalePool);
         }

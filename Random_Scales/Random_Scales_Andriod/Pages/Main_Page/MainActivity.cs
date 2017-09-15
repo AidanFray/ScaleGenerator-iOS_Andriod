@@ -1,11 +1,8 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
-using System.Collections.Generic;
 using Android.Content;
 using Random_Scales_Andriod.Activities;
-using Android.Graphics.Drawables;
-using Android.Graphics;
 using static Random_Scales_Andriod.Resources.settings.Settings_Android;
 
 namespace Random_Scales_Andriod
@@ -23,10 +20,11 @@ namespace Random_Scales_Andriod
             
             // Setting saving
             SettingAndroid.Assign_Pref(this);
+            
+            //Sets up for first time load
+            SettingAndroid.Initial_Setup();
 
-            //TODO: This needs to be a first loads?
-            //SettingAndroid.Initial_Setup();
-
+            //Loads the values
             SettingAndroid.LoadSettings();
         }
         
