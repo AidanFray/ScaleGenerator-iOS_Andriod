@@ -109,8 +109,20 @@ namespace Random_Scales_Andriod.Activities
             //Grabs the next scale from the settings page
             string prevS = ScaleText.Text;
             string s = $"{SettingAndroid.NextKey()}\n{SettingAndroid.NextMode()}";
-
             ScaleText.Text = s;
+
+            //Loads in the image
+            ImageView view = FindViewById<ImageView>(Resource.Id.imageView1);
+            
+            //This is to turn the values into filenames
+            string fileName = s.Replace("#", "s");
+            fileName = fileName.Replace("\n", "_");
+            fileName = fileName.Replace("-", "_");
+            fileName = fileName.Replace(" (Alt)", "");
+            
+            //Grabs the image
+            int x = (int)typeof(Resource.Drawable).GetField(fileName).GetVa‌​lue(null);
+            view.SetImageResource(x);
         }
     }
 }

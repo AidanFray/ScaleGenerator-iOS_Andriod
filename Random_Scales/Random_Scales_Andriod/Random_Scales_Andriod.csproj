@@ -79,6 +79,144 @@
     <Compile Include="Shared_Pages.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Ab_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Ab_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Ab_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Ab_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Ab_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Ab_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Ab_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Ab_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\AppIconNoBackground.png" />
+    <AndroidResource Include="Resources\drawable\As_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\As_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\As_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\As_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\As_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\As_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\As_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\As_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\A_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\A_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\A_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\A_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\A_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\A_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\A_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\A_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Bb_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Bb_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Bb_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Bb_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Bb_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Bb_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Bb_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Bb_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\B_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\B_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\B_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\B_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\B_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\B_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\B_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\B_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Cs_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Cs_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Cs_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Cs_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Cs_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Cs_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Cs_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Cs_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\C_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\C_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\C_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\C_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\C_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\C_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\C_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\C_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Db_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Db_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Db_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Db_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Db_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Db_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Db_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Db_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Ds_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Ds_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Ds_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Ds_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Ds_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Ds_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Ds_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Ds_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\D_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\D_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\D_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\D_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\D_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\D_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\D_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\D_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Eb_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Eb_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Eb_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Eb_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Eb_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Eb_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Eb_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Eb_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\E_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\E_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\E_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\E_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\E_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\E_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\E_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\E_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Fs_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Fs_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Fs_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Fs_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Fs_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Fs_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Fs_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Fs_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\F_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\F_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\F_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\F_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\F_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\F_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\F_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\F_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Gb_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Gb_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Gb_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Gb_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Gb_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Gb_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Gb_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Gb_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Gs_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\Gs_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\Gs_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\Gs_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Gs_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\Gs_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\Gs_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\Gs_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\G_Aeolian.png" />
+    <AndroidResource Include="Resources\drawable\G_Dorian.png" />
+    <AndroidResource Include="Resources\drawable\G_Ionian.png" />
+    <AndroidResource Include="Resources\drawable\G_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\G_Lydian.png" />
+    <AndroidResource Include="Resources\drawable\G_Mixolydian.png" />
+    <AndroidResource Include="Resources\drawable\G_Phrygian.png" />
+    <AndroidResource Include="Resources\drawable\G_Super_Locrian.png" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\layout\Main.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -103,16 +241,10 @@
     <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AppIconNoBackground.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\values\dimens.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-sw720dp\dimens.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\xml\app_preferences.xml" />
@@ -121,6 +253,57 @@
     <AndroidResource Include="Resources\values\theme.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\A_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Ab_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\As_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\B_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Bb_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\C_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Cs_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\D_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Db_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Ds_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\E_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Eb_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\F_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Fs_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\G_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Gb_Whole_Tone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Gs_Whole_Tone.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
