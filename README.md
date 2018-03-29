@@ -1,4 +1,7 @@
-![alt text](https://i.imgur.com/x9GMXdQ.png)
+<p align="center">
+  <img src="https://i.imgur.com/x9GMXdQ.png">
+</p>
+
 # Scale Generator
 An application that is designed to randomly provide scales for practising musicians.
 
